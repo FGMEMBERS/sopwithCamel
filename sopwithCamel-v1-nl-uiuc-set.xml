@@ -25,7 +25,6 @@ Last update: Nov 9, 2002 Michael Selig, m-selig@uiuc.edu
   <aircraft-dir>Aircraft/UIUC/sopwithCamel-v1-nl</aircraft-dir>
 
   <sound>
-   <audible>true</audible>
    <path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
   </sound>
 
