@@ -20,6 +20,9 @@ Last update: Nov 9, 2002 Michael Selig, m-selig@uiuc.edu
 
  <sim>
 
+  <description>Sopwith Camel</description>
+  <status>production</status>
+
   <flight-model>larcsim</flight-model>
   <aero>uiuc</aero>
   <aircraft-dir>Aircraft/UIUC/sopwithCamel-v1-nl</aircraft-dir>
