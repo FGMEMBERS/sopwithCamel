@@ -3,5 +3,6 @@
 <PropertyList include="sopwithCamel-v1-nl-uiuc-set.xml">
  <sim>
   <description>Alias for sopwithCamel-v1-nl-uiuc</description>
+  <author>A.F.Scrub "Scrubby PC" (3D), Michael Selig (FDM)</author>
  </sim>
 </PropertyList>
