@@ -15,7 +15,7 @@ kids 89
 OBJECT poly
 name "rudder"
 loc 4.30537 -0.88123 -0.00818237
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture.rgb"
+texture "textures/camel-texture.rgb"
 crease 61.000000
 numvert 219
 -0.020731 -0.358272 0.0163647
@@ -1776,7 +1776,7 @@ kids 0
 OBJECT poly
 name "outer_spar-forward"
 loc -0.609037 -0.00480335 -0.430472
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 244
 0.0970182 -0.0336691 3.34544
@@ -3628,7 +3628,7 @@ kids 0
 OBJECT poly
 name "outer_spar-rear"
 loc 0.0155458 -0.00480335 -0.430472
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 242
 0.557355 -1.21895 3.32784
@@ -5474,7 +5474,7 @@ kids 0
 OBJECT poly
 name "inner_spar-rear"
 loc -0.24849 -0.00480335 2.15844
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 244
 0.557355 -0.677509 -1.81803
@@ -7326,7 +7326,7 @@ kids 0
 OBJECT poly
 name "inner_spar-forward"
 loc -0.940588 0.121619 2.15844
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 244
 0.422966 -0.154717 -1.43523
@@ -9958,7 +9958,7 @@ kids 0
 OBJECT poly
 name "horizontal_stabiliser_fixed"
 loc 3.67372 -0.865947 -0.553342
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 409
 -0.26792 0.011295 1.58097
@@ -13169,7 +13169,7 @@ kids 0
 OBJECT poly
 name "elevator"
 loc 4.20171 -0.877206 -0.553342
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 374
 -0.228237 0.000181258 0.883184
@@ -18611,7 +18611,7 @@ kids 0
 OBJECT poly
 name "inner_spar-forward"
 loc -0.441334 -1.86878 -0.422226
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 128
 -0.139726 0.358521 0.755282
@@ -19335,7 +19335,7 @@ kids 0
 OBJECT poly
 name "inner_spar-forward"
 loc 0.178119 -1.89759 -0.422226
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 128
 -0.247719 -0.269198 0.94323
@@ -22990,7 +22990,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.171715 -2.27714 -0.346686
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 8
 -0.151148 -0.0288961 0.87953
@@ -23019,7 +23019,7 @@ refs 4
 kids 0
 OBJECT poly
 name "cylinder"
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 92
 -0.253531 -2.27676 0.198147
@@ -25395,7 +25395,7 @@ kids 0
 OBJECT poly
 name "wheel"
 loc 1.34467 -0.34536 -0.490604
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture.rgb"
+texture "textures/camel-texture.rgb"
 crease 61.000000
 numvert 96
 -1.33002 -1.84197 1.20191
@@ -41893,7 +41893,7 @@ kids 0
 OBJECT poly
 name "object"
 loc -0.0656964 -0.452873 -0.103182
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture.rgb"
+texture "textures/camel-texture.rgb"
 crease 61.000000
 numvert 18
 -0.268879 0.0100826 0.257955
@@ -44814,7 +44814,7 @@ kids 0
 OBJECT poly
 name "cockpit_rib_2"
 loc 0.248079 -1.52777 -0.281999
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 16
 0.0998502 -0.000891328 0.615066
@@ -44894,7 +44894,7 @@ kids 0
 OBJECT poly
 name "cockpit_rib_3"
 loc 0.566575 -1.52777 -0.273093
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 16
 0.0998502 0.808631 0.611385
@@ -44974,7 +44974,7 @@ kids 0
 OBJECT poly
 name "cockpit_rib_1_inner"
 loc -0.0307205 -1.52854 -0.289058
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 24
 0.101298 0.806109 0.602508
@@ -45118,7 +45118,7 @@ kids 0
 OBJECT poly
 name "cockpit_main_stringer"
 loc -0.0848262 -0.569746 -0.210992
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 24
 0.879016 -0.158903 0.482529
@@ -45262,7 +45262,7 @@ kids 0
 OBJECT poly
 name "cockpit_rib_1"
 loc -0.148833 -0.821986 -0.179726
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 92
 0.224968 -0.231212 0.603775
@@ -46418,7 +46418,7 @@ kids 0
 OBJECT poly
 name "cockpit_floor_support"
 loc -0.12287 -1.35877 -0.00110682
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 12
 0.138412 -0.194669 0.260018
@@ -46494,7 +46494,7 @@ kids 0
 OBJECT poly
 name "cockpit_rib_1_brace"
 loc 0.0545121 -1.01311 -0.370823
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 16
 -0.01926 0.015055 0.77186
@@ -46574,7 +46574,7 @@ kids 0
 OBJECT poly
 name "thin_rib"
 loc 0.138718 -0.821986 -0.167797
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 92
 0.0815468 -0.642421 0.520679
@@ -47730,7 +47730,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 0.547356 -1.11066 -0.335585
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 24
 0.00498521 0.387342 0.660056
@@ -47832,7 +47832,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc -0.104678 -2.27606 -0.286577
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 71
 0 0 0.861218
@@ -48509,7 +48509,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc -0.324174 -2.27606 -0.286577
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 71
 0.0354716 0.00792646 0.861218
@@ -49186,7 +49186,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.215115 -2.27714 -0.0985402
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 12
 -0.107748 0.0288961 0.299221
@@ -49248,7 +49248,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.171715 -2.27714 -0.346686
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 14
 -0.0643482 0.0288961 0.84489
@@ -49314,7 +49314,7 @@ name "wing-top-centre-spar"
 loc 0.0075371 3.37319e-005 -0.510258
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 12
 -0.511151 -0.0317931 0.536171
@@ -49380,7 +49380,7 @@ kids 4
 OBJECT poly
 name "box"
 loc 0.00217342 -0.252738 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 40
 -0.21076 0.0105164 0.722693
@@ -49602,7 +49602,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.000310481 -0.0565091 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 40
 -0.208276 -0.00533879 0.724486
@@ -49824,7 +49824,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.000310481 0.0925259 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 40
 -0.208276 0.0105164 0.722693
@@ -50046,7 +50046,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.00155246 0.216722 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 40
 -0.207034 -0.00533879 0.700709
@@ -50268,7 +50268,7 @@ kids 0
 OBJECT poly
 name "cockpit_floorboard_forward"
 loc 0.212068 -1.01017 -0.234568
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 12
 -0.546214 -0.433432 0.634541
@@ -50316,7 +50316,7 @@ kids 0
 OBJECT poly
 name "cockpit_floorboard"
 loc 0.372515 -1.4436 -0.228133
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 30
 -0.164229 1.07288e-006 0.573591
@@ -50651,7 +50651,7 @@ kids 0
 OBJECT poly
 name "cockpit_padding"
 loc 0.199673 -0.454879 -0.0677589
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/leather.rgb"
+texture "textures/leather.rgb"
 crease 61.000000
 numvert 1294
 0.478439 0.0317576 0.0976709
@@ -61125,7 +61125,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 0.0101131 -0.763182 -0.625458
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 18
 0.0261836 0.0475187 0.968829
@@ -61207,7 +61207,7 @@ kids 0
 OBJECT poly
 name "cockpit_skin"
 loc 0.084844 -1.01017 -0.256647
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 274
 -0.41812 -0.535556 0.59674
@@ -62795,7 +62795,7 @@ kids 0
 OBJECT poly
 name "panel"
 loc -0.0854078 -0.823098 -0.162596
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 20
 0 0.340027 0.0370765
@@ -62866,7 +62866,7 @@ kids 0
 OBJECT poly
 name "polyline"
 loc 3.69453 -0.88123 0.00808974
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture.rgb"
+texture "textures/camel-texture.rgb"
 crease 61.000000
 numvert 163
 0.313091 -0.0815331 -0.00808974
@@ -64169,7 +64169,7 @@ kids 0
 OBJECT poly
 name "rudder_bar"
 loc -0.338971 -1.43659 -0.104005
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wood1.rgb"
+texture "textures/wood1.rgb"
 crease 61.000000
 numvert 40
 0.0261228 0.017645 0.367115
@@ -67637,7 +67637,7 @@ kids 0
 OBJECT poly
 name "seat"
 loc 0.493226 -0.890572 -9.71815e-009
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/wicker-small.rgb"
+texture "textures/wicker-small.rgb"
 crease 61.000000
 numvert 45
 0.202026 0.181053 4.32902e-007
@@ -67974,7 +67974,7 @@ kids 0
 OBJECT poly
 name "seat_back_padding"
 loc 0.680067 -0.720335 -0.0607858
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/leather.rgb"
+texture "textures/leather.rgb"
 crease 61.000000
 numvert 92
 -0.329202 -0.193732 0.299135
@@ -80654,7 +80654,7 @@ kids 0
 OBJECT poly
 name "fuselage"
 loc 1.70956 -1.00996 0.259937
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture.rgb"
+texture "Textures/camel-texture.rgb"
 crease 61.000000
 numvert 99
 -0.949161 0.458291 -0.530607
@@ -81375,7 +81375,7 @@ kids 0
 OBJECT poly
 name "fuselage"
 loc 1.70966 -1.00373 0.260341
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture.rgb"
+texture "textures/camel-texture.rgb"
 crease 61.000000
 numvert 435
 -1.73173 0.328098 -0.593555
@@ -86830,7 +86830,7 @@ kids 3
 OBJECT poly
 name "wing-upper-centre"
 loc 0.07018 -0.000477083 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 168
 0.088879 0.00228124 6.33486
@@ -87934,7 +87934,7 @@ kids 0
 OBJECT poly
 name "wing-upper-stbd-bottom"
 loc -0.03503 -0.00209958 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 2016
 0.6858 -0.04022 4.56693
@@ -103114,7 +103114,7 @@ kids 0
 OBJECT poly
 name "wing-upper-stbd-top"
 loc -0.03515 0.00257667 0
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 2012
 0.137434 0.0276828 5.25187
@@ -118348,7 +118348,7 @@ name "aileron-upper-stbd-centre"
 loc 0.296919 -0.00123433 -1.14758
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 60
 -0.240421 0.0328395 5.90201
@@ -118734,7 +118734,7 @@ name "aileron-upper-stbd-bottom"
 loc -0.14846 0.000617166 0.573792
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 122
 0.204958 -0.030243 4.18063
@@ -119562,7 +119562,7 @@ name "aileron-upper-stbd-top"
 loc -0.14846 0.000617166 0.573792
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 116
 0.541279 -0.0122968 5.86483
@@ -120316,7 +120316,7 @@ name "aileron-lower-centre"
 loc 0 -1.44497 0.037838
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 52
 0.204958 1.58525 5.72806
@@ -120656,7 +120656,7 @@ name "aileron-lower-bottom"
 loc 0 -1.44481 0.0378339
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 100
 0.541031 1.57453 5.71792
@@ -121280,7 +121280,7 @@ name "aileron-lower-top"
 loc 0 -1.44481 0.0378339
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 100
 0.204958 1.51216 3.99572
@@ -121907,7 +121907,7 @@ OBJECT poly
 name "wing-lower-top"
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 1844
 -7.9218 0.0886905 2.15399
@@ -135759,7 +135759,7 @@ name "wing-lower-centre"
 loc 0 0 -1.19209e-007
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 100
 -7.18232 0.287483 5.28013
@@ -136290,7 +136290,7 @@ OBJECT poly
 name "wing-bottom"
 data 4
 Mesh
-texture "C:/cygwin/FlightGear/data/Aircraft/sopwithCamel/camel/textures/camel-texture3.rgb"
+texture "textures/camel-texture3.rgb"
 crease 61.000000
 numvert 1822
 -7.9218 0.0179349 2.15832
