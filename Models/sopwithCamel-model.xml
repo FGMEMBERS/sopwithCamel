@@ -13,7 +13,7 @@
 	</offsets>
 
 	<model>
-		<path>Aircraft/SopwithCamel/Models/clerget.xml</path>
+		<path>Aircraft/sopwithCamel/Models/clerget.xml</path>
 		<offsets>
 			<x-m>-0.70</x-m>
 			<y-m>0.0</y-m>
@@ -23,7 +23,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/SopwithCamel/Models/MkV30hrWatch.xml</path>
+		<path>Aircraft/sopwithCamel/Models/MkV30hrWatch.xml</path>
 		<offsets>
 			<x-m>-0.08</x-m>
 			<y-m>0.2</y-m>
@@ -33,7 +33,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/SopwithCamel/Models/type259compass.xml</path>
+		<path>Aircraft/sopwithCamel/Models/type259compass.xml</path>
 		<offsets>
 			<x-m>-0.03</x-m>
 			<y-m>0</y-m>
@@ -43,7 +43,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/SopwithCamel/Models/markVAaltimeter.xml</path>
+		<path>Aircraft/sopwithCamel/Models/markVAaltimeter.xml</path>
 		<offsets>
 			<x-m>-0.08</x-m>
 			<y-m>0</y-m>
@@ -53,7 +53,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/SopwithCamel/Models/asi.xml</path>
+		<path>Aircraft/sopwithCamel/Models/asi.xml</path>
 		<offsets>
 			<x-m>-0.05</x-m>
 			<y-m>0.2</y-m>
