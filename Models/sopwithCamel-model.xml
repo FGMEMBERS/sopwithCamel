@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>camel-9.ac</path>
+	<texture-path>Textures</texture-path>
+
+	<offsets>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+		<pitch-deg>0</pitch-deg>
+	</offsets>
+
+	<model>
+		<path>Aircraft/SopwithCamel/Models/clerget.xml</path>
+		<offsets>
+			<x-m>-0.70</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.05</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/SopwithCamel/Models/MkV30hrWatch.xml</path>
+		<offsets>
+			<x-m>-0.08</x-m>
+			<y-m>0.2</y-m>
+			<z-m>0.13</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/SopwithCamel/Models/type259compass.xml</path>
+		<offsets>
+			<x-m>-0.03</x-m>
+			<y-m>0</y-m>
+			<z-m>0.37</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/SopwithCamel/Models/markVAaltimeter.xml</path>
+		<offsets>
+			<x-m>-0.08</x-m>
+			<y-m>0</y-m>
+			<z-m>0.19</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/SopwithCamel/Models/asi.xml</path>
+		<offsets>
+			<x-m>-0.05</x-m>
+			<y-m>0.2</y-m>
+			<z-m>0.35</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Textures/chrome2.rgb</texture>
+		<object-name>cowl</object-name>
+		<object-name>cockpit_tube_brace</object-name>
+	</animation>
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Textures/brass.rgb</texture>
+		<object-name>switch_body</object-name>
+		<object-name>knob</object-name>
+	</animation>
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Textures/chrome2.rgb</texture>
+		<object-name>fuselage</object-name>
+		<object-name>fuselage-cover-plate-P</object-name>
+		<object-name>fuselage-cover-plate-S</object-name>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>30.0</factor>
+
+		<center>
+			<x-m>3.950000</x-m>
+			<y-m>0.000000</y-m>
+			<z-m>0.600000</z-m>
+		</center>
+
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+</PropertyList>

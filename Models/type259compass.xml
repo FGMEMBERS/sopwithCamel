@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<PropertyList> 
+
+	<path>type259compass.ac</path>
+	<texture-path>Textures</texture-path>
+
+	<animation> 
+		<type>rotate</type>
+		<object-name>dial</object-name>
+		<property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+		<axis> 
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>-0.00603863</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.00224962</z-m>
+		</center>
+	</animation>
+	<animation> 
+		<type>rotate</type>
+		<object-name>face</object-name>
+		<property>orientation/roll-deg</property>
+		<factor>1</factor>
+		<axis> 
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+<!--
+		<center>
+			<x-m>0.00757943</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.0471272</z-m>
+		</center>
+-->
+	</animation>
+		
+	<!-- *** LoD *** -->
+	<animation> 
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+</PropertyList>
