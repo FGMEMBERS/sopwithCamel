@@ -19,7 +19,7 @@
 
 		<model>
 			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model.xml</path>
-			<texture-path>Aircraft/sopwithCamel/Models/textures</texture-path>
+			<texture-path>Aircraft/sopwithCamel/Models/Textures</texture-path>
 		</model>
 
 		<view n="0">
@@ -31,6 +31,22 @@
 			<z-offset-m archive="y">0.7</z-offset-m> <!--Back-->
 			</config>
 		</view>
-	</sim>
 
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Camel</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Toggle extra details</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/camel/extra-details</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+
+	</sim>
 </PropertyList>
