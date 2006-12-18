@@ -1,8 +1,36 @@
 <?xml version="1.0"?>
 
-<PropertyList include="sopwithCamel-v1-nl-uiuc-set.xml">
- <sim>
-  <description>Alias for sopwithCamel-v1-nl-uiuc</description>
-  <author>A.F.Scrub "Scrubby PC" (3D), Michael Selig (FDM)</author>
- </sim>
+<PropertyList>
+	<sim>
+		<description>Sopwith Camel 1F.1</description>
+		<author>AJ MacLeod, Vivian Meazza, Michael Selig(FDM)</author>
+		<status>alpha</status>
+
+		<flight-model>larcsim</flight-model>
+		<aero>uiuc</aero>
+		<aircraft-dir>Aircraft/UIUC/sopwithCamel-v2-nl</aircraft-dir>
+
+		<sound>
+			<path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
+		</sound>
+
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+		<model>
+			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model.xml</path>
+			<texture-path>Aircraft/sopwithCamel/Models/textures</texture-path>
+		</model>
+
+		<view n="0">
+		<internal archive="y">true</internal>
+		<config>
+			<pitch-offset-deg>0.0</pitch-offset-deg>
+			<x-offset-m archive="y">0.0</x-offset-m> <!--Right-->
+			<y-offset-m archive="y">0.70</y-offset-m> <!--Up-->
+			<z-offset-m archive="y">0.7</z-offset-m> <!--Back-->
+			</config>
+		</view>
+	</sim>
+
 </PropertyList>
