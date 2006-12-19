@@ -37,6 +37,16 @@
 		</center>
 -->
 	</animation>
+
+	<animation> 
+		<type>select</type>
+		<object-name>screws</object-name>
+		<condition>
+			<property>sim/model/camel/extra-details</property>
+			<value type="bool">true</value>
+		</condition>
+	</animation> 
+
 		
 	<!-- *** LoD *** -->
 	<animation> 
