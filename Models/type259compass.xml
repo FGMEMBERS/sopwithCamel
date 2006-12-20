@@ -29,13 +29,6 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-<!--
-		<center>
-			<x-m>0.00757943</x-m>
-			<y-m>0</y-m>
-			<z-m>-0.0471272</z-m>
-		</center>
--->
 	</animation>
 
 	<animation> 
@@ -43,7 +36,6 @@
 		<object-name>screws</object-name>
 		<condition>
 			<property>sim/model/camel/extra-details</property>
-			<value type="bool">true</value>
 		</condition>
 	</animation> 
 

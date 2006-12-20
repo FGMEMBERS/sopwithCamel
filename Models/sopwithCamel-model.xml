@@ -26,7 +26,7 @@
 		<path>Aircraft/sopwithCamel/Models/MkV30hrWatch.xml</path>
 		<offsets>
 			<x-m>-0.08</x-m>
-			<y-m>0.2</y-m>
+			<y-m>0.14</y-m>
 			<z-m>0.13</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
@@ -58,6 +58,26 @@
 			<x-m>-0.05</x-m>
 			<y-m>0.2</y-m>
 			<z-m>0.35</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/sopwithCamel/Models/fakepanel.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/sopwithCamel/Models/fuel_pressure.xml</path>
+		<offsets>
+			<x-m>-0.05</x-m>
+			<y-m>0.24</y-m>
+			<z-m>0.13</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
