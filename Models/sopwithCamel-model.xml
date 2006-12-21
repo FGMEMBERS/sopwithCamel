@@ -37,7 +37,17 @@
 		<offsets>
 			<x-m>-0.03</x-m>
 			<y-m>0</y-m>
-			<z-m>0.37</z-m>
+			<z-m>0.38</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/sopwithCamel/Models/elliot_clinometer.xml</path>
+		<offsets>
+			<x-m>-0.03</x-m>
+			<y-m>0</y-m>
+			<z-m>0.27</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -47,7 +57,7 @@
 		<offsets>
 			<x-m>-0.08</x-m>
 			<y-m>0</y-m>
-			<z-m>0.19</z-m>
+			<z-m>0.17</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -104,24 +114,135 @@
 		<object-name>fuselage-cover-plate-P</object-name>
 		<object-name>fuselage-cover-plate-S</object-name>
 	</animation>
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>Textures/chrome2.rgb</texture>
+		<object-name>glass</object-name>
+	</animation>
 
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder</object-name>
 		<property>controls/flight/rudder</property>
 		<factor>30.0</factor>
-
 		<center>
-			<x-m>3.950000</x-m>
+			<x-m>4.0121</x-m>
 			<y-m>0.000000</y-m>
 			<z-m>0.600000</z-m>
 		</center>
-
 		<axis>
 			<x>0</x>
 			<y>0</y>
 			<z>1</z>
 		</axis>
 	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder-control-wire-P</object-name>
+		<property>controls/flight/rudder</property>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>27</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>4.0287</x-m>
+			<y-m>0.0703</y-m>
+			<z-m>-0.0353</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder-control-wire-S</object-name>
+		<property>controls/flight/rudder</property>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-27</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>4.0287</x-m>
+			<y-m>-0.0703</y-m>
+			<z-m>-0.0353</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+	<!--  *** ailerons *** -->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron-upper-stbd</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>20.0</factor>
+		<axis>
+			<x1-m>0.1823</x1-m>
+			<y1-m>4.2191</y1-m>
+			<z1-m>1.0373</z1-m>
+			<x2-m>0.1823</x2-m>
+			<y2-m>2.5244</y2-m>
+			<z2-m>1.0391</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron-upper-port</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>20.0</factor>
+		<axis>
+			<x1-m>0.1823</x1-m>
+			<y1-m>-4.2191</y1-m>
+			<z1-m>1.0373</z1-m>
+			<x2-m>0.1823</x2-m>
+			<y2-m>-2.5244</y2-m>
+			<z2-m>1.0391</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- *** LoD for the whole model *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10000</max-m>
+	</animation>
+
+	<animation> 
+		<type>select</type>
+		<object-name>screw-heads</object-name>
+		<condition>
+			<property>sim/model/camel/extra-details</property>
+		</condition>
+	</animation> 
 
 </PropertyList>
