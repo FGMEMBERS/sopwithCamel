@@ -20,6 +20,9 @@
 		<model>
 			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model.xml</path>
 			<texture-path>Aircraft/sopwithCamel/Models/Textures</texture-path>
+			<camel>
+				<extra-details archive="y" type="bool">true</extra-details>
+			</camel>
 		</model>
 
 		<view n="0">
