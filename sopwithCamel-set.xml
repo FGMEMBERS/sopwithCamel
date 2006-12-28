@@ -10,6 +10,10 @@
 		<aero>uiuc</aero>
 		<aircraft-dir>Aircraft/UIUC/sopwithCamel-v2-nl</aircraft-dir>
 
+		<startup>
+			<splash-texture>Aircraft/sopwithCamel/splash.rgb</splash-texture>
+		</startup>
+
 		<sound>
 			<path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
 		</sound>
