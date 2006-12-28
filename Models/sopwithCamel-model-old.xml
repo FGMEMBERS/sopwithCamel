@@ -23,51 +23,11 @@
 	</model>
 
 	<model>
-		<path>Aircraft/sopwithCamel/Models/tacho.xml</path>
-		<offsets>
-			<x-m>-0.05</x-m>
-			<y-m>-0.17</y-m>
-			<z-m>0.35</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-
-	<model>
 		<path>Aircraft/sopwithCamel/Models/MkV30hrWatch.xml</path>
 		<offsets>
 			<x-m>-0.08</x-m>
 			<y-m>0.14</y-m>
 			<z-m>0.13</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-
-	<model>
-		<path>Aircraft/sopwithCamel/Models/pulsometer.xml</path>
-		<offsets>
-			<x-m>-0.03</x-m>
-			<y-m>-0.26</y-m>
-			<z-m>0.20</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-
-	<model>
-		<path>Aircraft/sopwithCamel/Models/mag_switch_1.xml</path>
-		<offsets>
-			<x-m>-0.03</x-m>
-			<y-m>-0.19</y-m>
-			<z-m>0.17</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-
-	<model>
-		<path>Aircraft/sopwithCamel/Models/mag_switch_2.xml</path>
-		<offsets>
-			<x-m>-0.03</x-m>
-			<y-m>-0.10</y-m>
-			<z-m>0.17</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -139,8 +99,6 @@
 		<object-name>cowl</object-name>
 		<object-name>cockpit_tube_brace</object-name>
 	</animation>
-
-	<!--
 	<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
@@ -148,8 +106,6 @@
 		<object-name>switch_body</object-name>
 		<object-name>knob</object-name>
 	</animation>
-	-->
-
 	<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
