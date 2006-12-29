@@ -169,7 +169,7 @@
 		<type>rotate</type>
 		<object-name>rudder</object-name>
 		<property>controls/flight/rudder</property>
-		<factor>30.0</factor>
+		<factor>20.0</factor>
 		<center>
 			<x-m>4.0121</x-m>
 			<y-m>0.000000</y-m>
@@ -189,7 +189,7 @@
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
-				<dep>27</dep>
+				<dep>18</dep>
 			</entry>
 			<entry>
 				<ind>0</ind>
@@ -197,7 +197,7 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>-30</dep>
+				<dep>-20</dep>
 			</entry>
 		</interpolation>
 		<center>
@@ -219,7 +219,7 @@
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
-				<dep>30</dep>
+				<dep>20</dep>
 			</entry>
 			<entry>
 				<ind>0</ind>
@@ -227,7 +227,7 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>-27</dep>
+				<dep>-18</dep>
 			</entry>
 		</interpolation>
 		<center>
@@ -450,6 +450,97 @@
 			<x-m>0.6721</x-m>
 			<y-m>-3.4169</y-m>
 			<z-m>-0.3619</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--  *** elevator *** -->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>elevator</object-name>
+		<property>controls/flight/elevator</property>
+<!--		<factor>20.0</factor>-->
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-16.5</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>13.5</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>3.9735</x1-m>
+			<y1-m>-1.1881</y1-m>
+			<z1-m>0.1617</z1-m>
+			<x2-m>3.9735</x2-m>
+			<y2-m>1.1881</y2-m>
+			<z2-m>0.1617</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>elevator-control-wire-lower</object-name>
+		<property>controls/flight/elevator</property>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-16.5</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>13.5</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>3.9733</x-m>
+			<y-m>-0.4104</y-m>
+			<z-m>0.0516</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>elevator-control-wire-upper</object-name>
+		<property>controls/flight/elevator</property>
+		<interpolation>
+			<entry>
+				<ind>-1</ind>
+				<dep>-16.5</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>13.5</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>3.9733</x-m>
+			<y-m>-0.4104</y-m>
+			<z-m>0.2762</z-m>
 		</center>
 		<axis>
 			<x>0</x>
