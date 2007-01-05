@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+  <PropertyList> 
+    <path>stick.ac</path>
+    <texture-path>Textures</texture-path>
+
+	<!-- Ailerons -->
+    <animation> 
+      <type>rotate</type>
+      <object-name>main_stick</object-name>
+      <object-name>aileron_lever</object-name>
+      <property>/controls/flight/aileron</property>
+      <factor>15</factor>
+      <axis> 
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+      <center> 
+        <x-m>0.0637268</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+      </center>
+    </animation>
+    <animation> 
+      <type>rotate</type>
+      <object-name>elevator_control_rod</object-name>
+      <property>/controls/flight/aileron</property>
+      <factor>3.5</factor>
+      <axis> 
+        <x>0</x>
+        <y>0</y>
+        <z>-1</z>
+      </axis>
+      <center> 
+        <x-m>0.562615</x-m>
+        <y-m>0</y-m>
+        <z-m>0.114258</z-m>
+      </center>
+    </animation>
+	<!-- Elevators -->
+    <animation> 
+      <type>rotate</type>
+      <object-name>main_stick</object-name>
+      <property>/controls/flight/elevator</property>
+      <factor>10</factor>
+      <axis> 
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+      <center> 
+        <x-m>0.0637268</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+      </center>
+    </animation>
+    <animation> 
+      <type>scale</type>
+      <object-name>elevator_control_rod</object-name>
+      <property>/controls/flight/elevator</property>
+      <x-offset>1</x-offset>
+      <x-factor>-0.5</x-factor>
+      <y-factor>0</y-factor>
+      <z-factor>0</z-factor>
+    </animation>
+
+<!--
+	<animation> 
+		<type>select</type>
+		<object-name>screws</object-name>
+		<object-name>knob</object-name>
+		<condition>
+			<property>sim/model/camel/extra-details</property>
+		</condition>
+	</animation> 
+-->
+	<!-- *** LoD *** -->
+    <animation> 
+      <type>range</type>
+      <min-m>0</min-m>
+      <max-m>25</max-m>
+    </animation>
+  </PropertyList>
