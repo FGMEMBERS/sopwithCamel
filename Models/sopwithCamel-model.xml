@@ -23,6 +23,16 @@
 	</model>
 
 	<model>
+		<path>Aircraft/sopwithCamel/Models/stick.xml</path>
+		<offsets>
+			<x-m>0.1023</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.4077</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
 		<path>Aircraft/sopwithCamel/Models/tacho.xml</path>
 		<offsets>
 			<x-m>-0.05</x-m>
@@ -128,6 +138,26 @@
 			<x-m>-0.05</x-m>
 			<y-m>0.24</y-m>
 			<z-m>0.13</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/sopwithCamel/Models/vickers.xml</path>
+		<offsets>
+			<x-m>-0.3012</x-m>
+			<y-m>-0.1426</y-m>
+			<z-m>0.5095</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/sopwithCamel/Models/vickers.xml</path>
+		<offsets>
+			<x-m>-0.3012</x-m>
+			<y-m>0.1426</y-m>
+			<z-m>0.5095</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
