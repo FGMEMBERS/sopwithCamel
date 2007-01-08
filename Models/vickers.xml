@@ -5,42 +5,13 @@
 	<path>vickersMG-ver6.ac</path>
 	<texture-path>Textures</texture-path>
 
-	<!--<animation>
-		<type>rotate</type>
-		<object-name>ball</object-name>
-		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
-		<interpolation>
-			<entry>
-				<ind>-1</ind>
-				<dep>-7.5</dep>
-			</entry>
-			<entry>
-				<ind>0</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>1</ind>
-				<dep>7.5</dep>
-			</entry>
-		</interpolation>
-		<axis> 
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<center> 
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>-0.361787</z-m>
-		</center>
-	</animation>-->
-
 	<animation> 
 		<type>select</type>
 		<object-name>rivets</object-name>
 		<object-name>cocking-lever-asmbly</object-name>
 		<object-name>mechanism</object-name>
 		<object-name>cooling-jacket-high</object-name>
+		<object-name>butt-plate-assmbly</object-name>
 		<condition>
 			<property>sim/model/camel/extra-details</property>
 		</condition>
@@ -56,11 +27,10 @@
 		</condition>
 	</animation> 
 
-<animation> 
+	<animation> 
 		<type>select</type>
 		<object-name>construction</object-name>
 	</animation> 
-
 
   <!-- *** LoD *** 
     <animation> 

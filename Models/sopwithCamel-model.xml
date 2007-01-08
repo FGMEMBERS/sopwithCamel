@@ -145,9 +145,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/vickers.xml</path>
 		<offsets>
-			<x-m>-0.3012</x-m>
+			<x-m>-0.2500</x-m>
 			<y-m>-0.1426</y-m>
-			<z-m>0.5095</z-m>
+			<z-m>0.5150</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -155,9 +155,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/vickers.xml</path>
 		<offsets>
-			<x-m>-0.3012</x-m>
+			<x-m>-0.2500</x-m>
 			<y-m>0.1426</y-m>
-			<z-m>0.5095</z-m>
+			<z-m>0.5150</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -589,6 +589,7 @@
 	<animation> 
 		<type>select</type>
 		<object-name>screw-heads</object-name>
+		<object-name>gun-mounting</object-name>
 		<condition>
 			<property>sim/model/camel/extra-details</property>
 		</condition>
