@@ -3,6 +3,7 @@
     <path>stick.ac</path>
     <texture-path>Textures</texture-path>
 
+	<!-- Main Stick -->
 	<!-- Ailerons -->
     <animation> 
       <type>rotate</type>
@@ -64,20 +65,47 @@
       <z-factor>0</z-factor>
     </animation>
 
-<!--
+	<!-- Linkages -->
+
+	<!-- Port -->
+    <animation> 
+      <type>translate</type>
+      <object-name>aileron_control_links_port</object-name>
+      <property>/controls/flight/aileron</property>
+      <factor>-0.022</factor>
+      <axis> 
+        <x>0</x>
+        <y>-0.425441</y>
+        <z>0.0369531</z>
+      </axis>
+    </animation>
+
+	<!-- Stbd -->
+    <animation> 
+      <type>translate</type>
+      <object-name>aileron_control_links_stbd</object-name>
+      <property>/controls/flight/aileron</property>
+      <factor>-0.022</factor>
+      <axis> 
+        <x>0</x>
+        <y>-0.425441</y>
+        <z>0.0369531</z>
+      </axis>
+    </animation>
+
 	<animation> 
 		<type>select</type>
-		<object-name>screws</object-name>
-		<object-name>knob</object-name>
+		<object-name>aileron_control_links_port</object-name>
+		<object-name>aileron_control_links_stbd</object-name>
 		<condition>
 			<property>sim/model/camel/extra-details</property>
 		</condition>
 	</animation> 
--->
+
 	<!-- *** LoD *** -->
     <animation> 
       <type>range</type>
       <min-m>0</min-m>
-      <max-m>25</max-m>
+      <max-m>30</max-m>
     </animation>
   </PropertyList>

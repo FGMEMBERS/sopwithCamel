@@ -27,7 +27,7 @@
 		<offsets>
 			<x-m>0.1023</x-m>
 			<y-m>0.0</y-m>
-			<z-m>-0.4077</z-m>
+			<z-m>-0.44</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -578,6 +578,24 @@
 			<z>0</z>
 		</axis>
 	</animation>
+	
+ 	<animation>
+ 		<type>rotate</type>
+ 		<object-name>rudder_bar</object-name>
+ 		<property>controls/flight/rudder</property>
+ 		<factor>15</factor>
+ 		<center>
+ 			<x-m>-0.343805</x-m>
+ 			<y-m>0</y-m>
+ 			<z-m>-0.36683</z-m>
+ 		</center>
+ 		<axis>
+ 			<x>0</x>
+ 			<y>0</y>
+ 			<z>1</z>
+ 		</axis>
+ 	</animation>
+
 	
 	<!-- *** LoD for the whole model *** -->
 	<animation>
