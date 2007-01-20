@@ -55,6 +55,11 @@
 				</menu>
 			</default>
 		</menubar>
-
 	</sim>
+
+	<nasal>
+		<camel>
+			<file>Aircraft/sopwithCamel/Models/camel.nas</file>
+		</camel>
+	</nasal>
 </PropertyList>
