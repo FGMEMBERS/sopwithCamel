@@ -35,9 +35,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/tacho.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>-0.2213</y-m>
-			<z-m>0.2958</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>-0.1386</y-m>
+			<z-m>0.3611</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -45,9 +45,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/MkV30hrWatch.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>0.1485</y-m>
-			<z-m>0.1448</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>0.1168</y-m>
+			<z-m>0.2437</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -55,9 +55,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/pulsometer.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>-0.2653</y-m>
-			<z-m>0.1348</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>-0.2462</y-m>
+			<z-m>0.2440</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -65,9 +65,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/mag_switch_1.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>-0.1899</y-m>
-			<z-m>0.1348</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>-0.1797</y-m>
+			<z-m>0.2423</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -75,9 +75,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/mag_switch_2.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>-0.1146</y-m>
-			<z-m>0.1348</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>-0.1066</y-m>
+			<z-m>0.2423</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -85,9 +85,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/type259compass.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
+			<x-m>-0.0782</x-m>
 			<y-m>0</y-m>
-			<z-m>0.3336</z-m>
+			<z-m>0.425</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -95,9 +95,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/elliot_clinometer.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
+			<x-m>-0.0782</x-m>
 			<y-m>0</y-m>
-			<z-m>0.2317</z-m>
+			<z-m>0.3325</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -105,9 +105,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/markVAaltimeter.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
+			<x-m>-0.0782</x-m>
 			<y-m>0</y-m>
-			<z-m>0.1299</z-m>
+			<z-m>0.2648</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -115,9 +115,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/asi.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>0.2215</y-m>
-			<z-m>0.2958</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>0.1386</y-m>
+			<z-m>0.3611</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -125,9 +125,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/fakepanel.xml</path>
 		<offsets>
-			<x-m>-0.1130</x-m>
+			<x-m>-0.0775</x-m>
 			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<z-m>0.04</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -135,9 +135,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/fuel_pressure.xml</path>
 		<offsets>
-			<x-m>-0.1086</x-m>
-			<y-m>0.2540</y-m>
-			<z-m>0.1468</z-m>
+			<x-m>-0.0782</x-m>
+			<y-m>0.2331</y-m>
+			<z-m>0.2868</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -368,10 +368,10 @@
 		<axis>
 			<x1-m>0.1823</x1-m>
 			<y1-m>4.2191</y1-m>
-			<z1-m>1.0373</z1-m>
+			<z1-m>1.1002</z1-m>
 			<x2-m>0.1823</x2-m>
 			<y2-m>2.5244</y2-m>
-			<z2-m>1.0391</z2-m>
+			<z2-m>1.1020</z2-m>
 		</axis>
 	</animation>
 	
@@ -381,9 +381,9 @@
 		<property>controls/flight/aileron</property>
 		<factor>20.0</factor>
 		<center>
-			<x-m>0.5215</x-m>
+			<x-m>0.5658</x-m>
 			<y-m>3.4198</y-m>
-			<z-m>1.0164</z-m>
+			<z-m>1.0165</z-m>
 		</center>
 		<axis>
 			<x>0</x>
@@ -399,7 +399,7 @@
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
-				<dep>-18</dep>
+				<dep>-16.5</dep>
 			</entry>
 			<entry>
 				<ind>0</ind>
@@ -407,11 +407,11 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>20</dep>
+				<dep>17.0</dep>
 			</entry>
 		</interpolation>
 		<center>
-			<x-m>0.1925</x-m>
+			<x-m>0.2424</x-m>
 			<y-m>3.4172</y-m>
 			<z-m>1.1373</z-m>
 		</center>
@@ -430,10 +430,10 @@
 		<axis>
 			<x1-m>0.1823</x1-m>
 			<y1-m>-4.2191</y1-m>
-			<z1-m>1.0373</z1-m>
+			<z1-m>1.1002</z1-m>
 			<x2-m>0.1823</x2-m>
 			<y2-m>-2.5244</y2-m>
-			<z2-m>1.0391</z2-m>
+			<z2-m>1.1020</z2-m>
 		</axis>
 	</animation>
 	
@@ -443,7 +443,7 @@
 		<property>controls/flight/aileron</property>
 		<factor>20.0</factor>
 		<center>
-			<x-m>0.5215</x-m>
+			<x-m>0.5658</x-m>
 			<y-m>3.4198</y-m>
 			<z-m>1.0164</z-m>
 		</center>
@@ -461,7 +461,7 @@
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
-				<dep>-18</dep>
+				<dep>-16.5</dep>
 			</entry>
 			<entry>
 				<ind>0</ind>
@@ -469,13 +469,13 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>20</dep>
+				<dep>17.0</dep>
 			</entry>
 		</interpolation>
 		<center>
-			<x-m>0.1925</x-m>
+			<x-m>0.2424</x-m>
 			<y-m>-3.4172</y-m>
-			<z-m>1.1373</z-m>
+			<z-m>1.1996</z-m>
 		</center>
 		<axis>
 			<x>0</x>

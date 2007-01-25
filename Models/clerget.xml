@@ -9,7 +9,7 @@
 		<object-name>complete_engine</object-name>
 		<property>engines/engine/rpm</property>
 		<factor>0.5</factor>
-		<min>100</min>
+		<offset>100</offset>
 		<axis> 
 			<x>-1</x>
 			<y>0</y>

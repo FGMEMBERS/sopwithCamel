@@ -2,9 +2,9 @@
 
 <PropertyList>
 	<sim>
-		<description>Sopwith Camel 1F.1</description>
+		<description type="string">Sopwith Camel 1F.1 (uiuc)</description>
 		<author type="string">AJ MacLeod, Vivian Meazza, Michael Selig(FDM)</author>
-		<status>alpha</status>
+		<status type="string">early production</status>
 
 		<flight-model>larcsim</flight-model>
 		<aero>uiuc</aero>
@@ -14,7 +14,7 @@
 			<splash-texture>Aircraft/sopwithCamel/splash.rgb</splash-texture>
 		</startup>
 
-		<sound>
+		<sound> 
 			<path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
 		</sound>
 
@@ -33,8 +33,8 @@
 			<internal archive="y">true</internal>
 			<config>
 				<x-offset-m archive="y">0.0</x-offset-m> <!--Right-->
-				<y-offset-m archive="y">0.7150</y-offset-m> <!--Up-->
-				<z-offset-m archive="y">0.5130</z-offset-m> <!--Back-->
+				<y-offset-m archive="y">0.6563</y-offset-m> <!--Up-->
+				<z-offset-m archive="y">0.475</z-offset-m> <!--Back-->
 				<pitch-offset-deg>-15</pitch-offset-deg>
 				<default-field-of-view-deg>60</default-field-of-view-deg>
 			</config>
