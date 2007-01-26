@@ -7,3 +7,5 @@ dynamic_view.register(func {
 	me.heading_offset = -15 * sin(me.roll) * cos(me.pitch);
 });
 
+aircraft.data.add("/sim/model/camel/extra-details");
+
