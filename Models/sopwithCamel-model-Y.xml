@@ -13,7 +13,7 @@
 	</offsets>
 
 	<model>
-		<path>Aircraft/sopwithCamel/Models/clerget.xml</path>
+		<path>Aircraft/sopwithCamel/Models/clerget-Y.xml</path>
 		<offsets>
 			<x-m>-0.70</x-m>
 			<y-m>0.0</y-m>
@@ -43,7 +43,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/sopwithCamel/Models/tacho.xml</path>
+		<path>Aircraft/sopwithCamel/Models/tacho-Y.xml</path>
 		<offsets>
 			<x-m>-0.0782</x-m>
 			<y-m>-0.1386</y-m>
@@ -73,7 +73,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/sopwithCamel/Models/mag_switch_1.xml</path>
+		<path>Aircraft/sopwithCamel/Models/mag_switch_1-Y.xml</path>
 		<offsets>
 			<x-m>-0.0782</x-m>
 			<y-m>-0.1797</y-m>
@@ -83,7 +83,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/sopwithCamel/Models/mag_switch_2.xml</path>
+		<path>Aircraft/sopwithCamel/Models/mag_switch_2-Y.xml</path>
 		<offsets>
 			<x-m>-0.0782</x-m>
 			<y-m>-0.1066</y-m>
@@ -712,7 +712,7 @@
 	<animation>
  		<type>rotate</type>
  		<object-name>wheel-assmbly-port</object-name>
-		<offset-deg>3</offset-deg>
+		<offset-deg>0</offset-deg>
  		<center>
  			<x-m>-0.2732</x-m>
  			<y-m>-0.2026</y-m>
@@ -728,7 +728,7 @@
 	<animation>
  		<type>rotate</type>
  		<object-name>wheel-assmbly-stbd</object-name>
-		<offset-deg>3</offset-deg>
+		<offset-deg>0</offset-deg>
  		<center>
  			<x-m>-0.2732</x-m>
  			<y-m>0.2026</y-m>
@@ -740,9 +740,17 @@
  			<z>0</z>
  		</axis>
  	</animation>
-
-
 	
+	<animation>
+		<type>select</type>
+		<object-name>chocks</object-name>
+		<condition>
+			<property>controls/gear/brake-parking</property>
+			<property>gear/gear/wow</property>
+			<property>gear/gear[1]/wow</property>
+		</condition>
+	</animation>
+
 	<!-- *** LoD for the whole model *** -->
 	<animation>
 		<type>range</type>

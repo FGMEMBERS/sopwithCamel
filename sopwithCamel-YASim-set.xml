@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim include="help.xml">
+		<description type="string">Sopwith Camel 1F.1 (YASim)</description>
+		<author type="string">AJ MacLeod, Vivian Meazza</author>
+		<status type="string">beta</status>
+
+		<flight-model>yasim</flight-model>
+		<aero>sopwithCamel1F1</aero>
+
+		<startup>
+			<splash-texture>Aircraft/sopwithCamel/splash.rgb</splash-texture>
+		</startup>
+
+		<sound>
+			<path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
+		</sound>
+
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+		<model>
+			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model-Y.xml</path>
+			<texture-path>Aircraft/sopwithCamel/Models/Textures</texture-path>
+			<camel>
+				<extra-details archive="y"
+											 type="bool">true</extra-details>
+			</camel>
+		</model>
+
+		<view n="0">
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<!--Right-->
+				<y-offset-m archive="y">0.675</y-offset-m>
+				<!--Up-->
+				<z-offset-m archive="y">0.475</z-offset-m>
+				<!--Back-->
+
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+			</config>
+		</view>
+
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Camel</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Toggle extra details</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/camel/extra-details</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+
+	<input>
+		<keyboard>
+			<!-- map keys for mag switches  -->
+			<key n="123">
+				<name>{</name>
+				<desc>Mag Switch Left Toggle.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+
+						camel.magneto.toggleleftMagswitch();
+
+					</script>
+				</binding>
+			</key>
+			<key n="125">
+				<name>}</name>
+				<desc>Mag Switch Right Toggle.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+
+						camel.magneto.togglerightMagswitch();
+
+					</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+	<yasim>
+		<weights>
+			<pilot-lb type="double">200</pilot-lb>
+			<round-lb type="double">0.33</round-lb>
+		</weights>
+	</yasim>
+
+	<nasal>
+		<camel>
+			<file>Aircraft/sopwithCamel/Models/camel.nas</file>
+		</camel>
+	</nasal>
+</PropertyList>

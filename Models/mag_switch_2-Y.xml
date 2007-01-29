@@ -8,7 +8,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>controls/engines/engine/magnetos</property>
+		<property>controls/engines/engine/mag-switch-right</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -16,11 +16,7 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>2</ind>
-				<dep>0</dep>
+				<dep>45</dep>
 			</entry>
 		</interpolation>
 		<axis> 
@@ -31,7 +27,7 @@
 		<center> 
 			<x-m>0.0212</x-m>
 			<y-m>0.0</y-m>
-			<z-m>0</z-m>
+			<z-m>0.0</z-m>
 		</center>
 	</animation>
 

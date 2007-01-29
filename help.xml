@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+  <PropertyList> 
+    <help> 
+      <title>Camel 1F1</title>
+      <key> 
+        <name>Space</name>
+        <desc>Start</desc>
+      </key>
+      <key> 
+        <name>b</name>
+        <desc>blip switch - both magentos OFF </desc>
+      </key>
+      <key> 
+        <name>B</name>
+        <desc>toggle chocks</desc>
+      </key>
+      <key> 
+        <name>{ }</name>
+        <desc>toggle left/right magneto switch</desc>
+      </key>
+      <line></line>
+      <line>Approach</line>
+      <line></line>
+      <line>speed 55 MPH IAS</line>
+      <line>throttle OPEN</line>
+      <line>blip switch ON as required</line>
+      <line>touchdown speed: 50-55 MPH IAS</line>
+			<line>stall speed 48 MPH IAS</line>
+    </help>
+  </PropertyList>
