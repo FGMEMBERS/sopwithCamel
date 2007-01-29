@@ -99,7 +99,7 @@
 
 	<nasal>
 		<camel>
-			<file>Aircraft/sopwithCamel/Models/camel.nas</file>
+			<file>Aircraft/sopwithCamel/Models/camel-utils.nas</file>
 		</camel>
 	</nasal>
 </PropertyList>
