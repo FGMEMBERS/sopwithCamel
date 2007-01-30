@@ -1,4 +1,8 @@
-# this script contains a number of utilities for use with the Camel
+#####################################################################################
+#                                                                                   #
+#  this script contains a number of utilities for use with the Camel (YASim fdm)    #
+#                                                                                   #
+#####################################################################################
 
 # ================================ Initalize ====================================== 
 # Make sure all needed properties are present and accounted 
@@ -9,7 +13,6 @@ view_number_Node.setDoubleValue( 0 );
 
 enabledNode = props.globals.getNode("/sim/headshake/enabled", 1);
 enabledNode.setBoolValue(1);
-
 
 controls.fullBrakeTime = 0; 
 
@@ -40,20 +43,11 @@ initialize = func {
 	headshake = HeadShake.new();
 	magneto = Magneto.new();
 	
-	#crossfeed = FuelCock.new("crossfeed",
-	#						"controls/fuel/crossfeed",
-	#						0
-	#						);
-	
 	#set listeners
-	#setlistener( "controls/flight/speedbrake-lever", func { airbrake.update(); } );
-	setlistener( "controls/gear/brake-left", func { print("listener left " );
-	                                                magneto.blipMagswitch();
+	setlistener( "controls/gear/brake-left", func { magneto.blipMagswitch();
 	                                              } );
-	setlistener( "controls/gear/brake-right", func { print("listener right " );
-	                                                 magneto.blipMagswitch(); 
-	                                                 } );
-
+	setlistener( "controls/gear/brake-right", func { magneto.blipMagswitch(); 
+	                                              } );
 	# set it running on the next update cycle
 	settimer( update, 0 );
 
@@ -77,8 +71,6 @@ update = func {
 		headshake.update();
 	}
 		
-	
-	
 	settimer( update, 0 ); 
 
 }# end main loop func
@@ -141,7 +133,7 @@ Magneto = {
 	},
 
     updateMagnetos: func{     # set the magneto value according to the switch positions
-        print("updating Magnetos");
+        # print("updating Magnetos");
         if (me.left.getValue() and me.right.getValue()){                  # both
             me.magnetos.setValue( 3 );
         }
@@ -172,7 +164,7 @@ Magneto = {
     }, # end function
 
     toggleleftMagswitch:    func{
-        print ("left in ", me.left.getValue());
+        # print ("left in ", me.left.getValue());
         var left = me.left.getValue();
         left = !left;
         me.left.setBoolValue( left );
@@ -181,7 +173,7 @@ Magneto = {
     }, # end function
 
     togglerightMagswitch:   func{
-        print ("right in ", me.right.getValue());
+        # print ("right in ", me.right.getValue());
         var right = me.right.getValue();
         right = !right;
         me.right.setBoolValue( right );
@@ -190,15 +182,15 @@ Magneto = {
     }, # end function
     
     blipMagswitch:   func{
-        print ("blip in right ", me.right.getValue()," left ", me.left.getValue());
-        print ("blip in brake right ", me.right_brake.getValue()," left ", me.left_brake.getValue());
+        # print ("blip in right ", me.right.getValue()," left ", me.left.getValue());
+        # print ("blip in brake right ", me.right_brake.getValue()," left ", me.left_brake.getValue());
         if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {;
             me.magnetos.setValue( 0 );
         } else {
             me.updateMagnetos();
         }
        
-        print ("blip out right ", me.right.getValue()," left ", me.left.getValue());
+        # print ("blip out right ", me.right.getValue()," left ", me.left.getValue());
     }, # end function
 }; #
 
@@ -439,8 +431,6 @@ HeadShake = {
 				
 		},
 	};
-
-
 
 
 # ======================================= end Pilot G stuff ============================
