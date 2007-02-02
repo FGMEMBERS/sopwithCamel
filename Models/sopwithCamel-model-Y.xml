@@ -35,9 +35,9 @@
 	<model>
 		<path>Aircraft/sopwithCamel/Models/fuel_controls.xml</path>
 		<offsets>
-			<x-m>0</x-m>
+			<x-m>0.1374</x-m>
 			<y-m>0</y-m>
-			<z-m>0</z-m>
+			<z-m>-0.2069</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
@@ -712,11 +712,21 @@
 	<animation>
  		<type>rotate</type>
  		<object-name>wheel-assmbly-port</object-name>
-		<offset-deg>0</offset-deg>
+		<property>gear/gear/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>20</dep>
+			</entry>
+		</interpolation>
  		<center>
- 			<x-m>-0.2732</x-m>
+ 			<x-m>-0.2799</x-m>
  			<y-m>-0.2026</y-m>
- 			<z-m>-0.2451</z-m>
+ 			<z-m>-1.2449</z-m>
  		</center>
  		<axis>
  			<x>-1</x>
@@ -728,11 +738,21 @@
 	<animation>
  		<type>rotate</type>
  		<object-name>wheel-assmbly-stbd</object-name>
-		<offset-deg>0</offset-deg>
+		<property>gear/gear[1]/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>20</dep>
+			</entry>
+		</interpolation>
  		<center>
- 			<x-m>-0.2732</x-m>
+ 			<x-m>-0.2799</x-m>
  			<y-m>0.2026</y-m>
- 			<z-m>-0.2451</z-m>
+ 			<z-m>-1.2449</z-m>
  		</center>
  		<axis>
  			<x>1</x>

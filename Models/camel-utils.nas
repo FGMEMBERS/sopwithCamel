@@ -19,6 +19,7 @@ controls.fullBrakeTime = 0;
 pilot_g = nil;
 headshake = nil;
 magneto = nil;
+smoke = nil;
 
 
 var time = 0;
@@ -36,18 +37,25 @@ var last_zDivergence = 0;
 
 initialize = func {
 
-	print( "Initializing CAmel utilities ..." );
+	print( "Initializing Camel utilities ..." );
 	
 	# initialize objects
 	pilot_g = PilotG.new();
 	headshake = HeadShake.new();
 	magneto = Magneto.new();
+	smoke = Smoke.new();
 	
 	#set listeners
 	setlistener( "controls/gear/brake-left", func { magneto.blipMagswitch();
 	                                              } );
 	setlistener( "controls/gear/brake-right", func { magneto.blipMagswitch(); 
 	                                              } );
+	
+	setlistener( "engines/engine/cranking", func { smoke.updateSmoking(); 
+	                                              } );	
+	setlistener( "engines/engine/running", func { smoke.updateSmoking(); 
+	                                              } );																																							
+																								
 	# set it running on the next update cycle
 	settimer( update, 0 );
 
@@ -433,7 +441,41 @@ HeadShake = {
 	};
 
 
-# ======================================= end Pilot G stuff ============================
+# ============================ end Pilot G stuff ============================
+
+# =========================== smoke stuff ====================================
+# Class that specifies smoke functions 
+#
+Smoke = {
+	new : func ( name = "smoke",
+				cranking = "engines/engine/cranking",
+				running = "engines/engine/running",
+				smoking = "engines/engine/smoking"
+				){
+		var obj = { parents : [Smoke] };
+		obj.name = name;
+		obj.cranking = props.globals.getNode( cranking, 1 );
+		obj.running = props.globals.getNode( running, 1 );
+		obj.smoking = props.globals.getNode( smoking, 1 );
+		obj.smoking.setBoolValue( 0 );
+		print ( obj.name );
+		return obj;
+	},
+
+    updateSmoking: func{     # set the smoke value according to the engine conditions
+        # print("updating Smoke");
+        if (me.cranking.getValue() and !me.running.getValue()){  
+            me.smoking.setValue( 1 );
+        } else{
+            me.smoking.setValue( 0 );            # none
+        }
+
+     }, # end function
+
+}; #
+
+
+# =============================== end smoke stuff ================================
 
 # Fire it up
 

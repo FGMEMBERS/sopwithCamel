@@ -224,24 +224,27 @@ The reference datum for measurements is the propeller boss.
 
 	<!-- left main spring="0.7"  -1.5845 -->
 	<gear x="-0.9238"
-				y="0.6742"
+				y="0.68"
 				z="-1.5631"
 				compression="0.15" 
 				dfric="0.8" 
 				sfric="1.0" 
-				damp="0.5">
+				damp="0.8"
+				>
 		<control-input axis="/controls/gear/brake-parking"
 									 control="BRAKE"
 									 split="true"/>
 	</gear>
+	
 	<!-- right main spring="0.7"  -->
 	<gear x="-0.9234"
-				y="-0.6742"
+				y="-0.68"
 				z="-1.5631"
 				compression="0.15"
 				dfric="0.8" 
 				sfric="1.0" 
-				damp="0.5">
+				damp="0.8"
+				>
 		<control-input axis="/controls/gear/brake-parking"
 									 control="BRAKE"
 									 split="true"/>
@@ -284,9 +287,9 @@ The reference datum for measurements is the propeller boss.
 	<ballast x="-2.5"
 					 y="0"
 					 z="-0.4"
-					 mass="150"/>
+					 mass="200"/>
 
-	<!-- armament -->
+		<!-- armament -->
 	<!-- guns -->
 	<ballast x="-1.0" 
 					 y="0.1426"

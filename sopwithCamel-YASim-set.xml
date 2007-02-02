@@ -14,7 +14,7 @@
 		</startup>
 
 		<sound>
-			<path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
+			<path>Aircraft/sopwithCamel/Sounds/yasim/sopwithCamel-sound.xml</path>
 		</sound>
 
 		<virtual-cockpit archive="y">true</virtual-cockpit>
@@ -28,6 +28,11 @@
 											 type="bool">true</extra-details>
 			</camel>
 		</model>
+		
+		<submodels> 
+        <serviceable type="bool">true</serviceable>
+        <path>Aircraft/sopwithCamel/Models/camel-submodels.xml</path>
+      </submodels>
 
 		<view n="0">
 			<internal archive="y">true</internal>
