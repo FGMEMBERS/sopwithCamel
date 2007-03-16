@@ -3,8 +3,8 @@
     <path>stick.ac</path>
     <texture-path>Textures</texture-path>
 
-	<!-- Main Stick -->
-	<!-- Ailerons -->
+    <!-- Main Stick -->
+    <!-- Ailerons -->
     <animation> 
       <type>rotate</type>
       <object-name>main_stick</object-name>
@@ -38,7 +38,7 @@
         <z-m>0.114258</z-m>
       </center>
     </animation>
-	<!-- Elevators -->
+    <!-- Elevators -->
     <animation> 
       <type>rotate</type>
       <object-name>main_stick</object-name>
@@ -65,9 +65,22 @@
       <z-factor>0</z-factor>
     </animation>
 
-	<!-- Linkages -->
+    <!-- Blip Switch -->
+    <animation> 
+      <type>translate</type>
+      <object-name>switch_button</object-name>
+      <object-name>switch_shaft</object-name>
+      <property>sim/model/camel/blip_switch</property>
+      <factor>-0.0055</factor>
+      <axis> 
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </axis>
+    </animation>
 
-	<!-- Port -->
+    <!-- Linkages -->
+    <!-- Port -->
     <animation> 
       <type>translate</type>
       <object-name>aileron_control_links_port</object-name>
@@ -80,7 +93,7 @@
       </axis>
     </animation>
 
-	<!-- Stbd -->
+    <!-- Stbd -->
     <animation> 
       <type>translate</type>
       <object-name>aileron_control_links_stbd</object-name>
@@ -93,14 +106,14 @@
       </axis>
     </animation>
 
-	<animation> 
-		<type>select</type>
-		<object-name>aileron_control_links_port</object-name>
-		<object-name>aileron_control_links_stbd</object-name>
-		<condition>
-			<property>sim/model/camel/extra-details</property>
-		</condition>
-	</animation> 
+    <animation> 
+      <type>select</type>
+      <object-name>aileron_control_links_port</object-name>
+      <object-name>aileron_control_links_stbd</object-name>
+      <condition>
+        <property>sim/model/camel/extra-details</property>
+      </condition>
+    </animation> 
 
 	<!-- *** LoD *** -->
     <animation> 

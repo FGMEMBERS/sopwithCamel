@@ -194,8 +194,10 @@ Magneto = {
         # print ("blip in brake right ", me.right_brake.getValue()," left ", me.left_brake.getValue());
         if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {;
             me.magnetos.setValue( 0 );
+            setprop("sim/model/camel/blip_switch",1);
         } else {
             me.updateMagnetos();
+            setprop("sim/model/camel/blip_switch",0);
         }
        
         # print ("blip out right ", me.right.getValue()," left ", me.left.getValue());
