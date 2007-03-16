@@ -17,6 +17,7 @@ kids 3
 OBJECT poly
 name "switch_shaft"
 loc -0.0263746 -0.229289 0
+texture "Textures/brushed_brass2.rgb"
 crease 45.000000
 numvert 30
 0.0687752 0.689325 0.00325592
