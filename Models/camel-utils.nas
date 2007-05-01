@@ -452,7 +452,7 @@ Smoke = {
 	new : func ( name = "smoke",
 				cranking = "engines/engine/cranking",
 				running = "engines/engine/running",
-				smoking = "engines/engine/smoking"
+				smoking = "sim/ai/engines/engine/smoking"
 				){
 		var obj = { parents : [Smoke] };
 		obj.name = name;

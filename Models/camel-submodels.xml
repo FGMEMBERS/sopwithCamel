@@ -115,10 +115,10 @@
     <submodel> 
       <name>exhaust smoke r </name>
       <model>Aircraft/sopwithCamel/Models/exhaust.xml</model>
-      <trigger>engines/engine/smoking</trigger>
+      <trigger>/sim/ai/engines/engine/smoking</trigger>
       <speed>5</speed>
       <repeat>true</repeat>
-      <delay>0.001</delay>
+      <delay>0.1</delay>
       <count>-1</count>
       <x-offset>-1.5</x-offset>
       <y-offset>0.5</y-offset>
@@ -126,17 +126,18 @@
       <yaw-offset>-120</yaw-offset>
       <pitch-offset>-15</pitch-offset>
       <eda>5</eda>
-      <life>10</life>
+      <life>3</life>
       <buoyancy>36</buoyancy>
       <wind>true</wind>
+			<random>true</random>
     </submodel>
     <submodel> 
       <name>exhaust smoke l </name>
-      <model>Aircraft/sopwithCamel/Models/exhaust.xml</model>
-      <trigger>engines/engine/smoking</trigger>
+      <model>Aircraft/sopwithCamel/Models/exhaust2.xml</model>
+      <trigger>/sim/ai/engines/engine/smoking</trigger>
       <speed>5</speed>
       <repeat>true</repeat>
-      <delay>0.001</delay>
+      <delay>0.1</delay>
       <count>-1</count>
       <x-offset>-1.5</x-offset>
       <y-offset>-0.5</y-offset>
@@ -144,9 +145,10 @@
       <yaw-offset>120</yaw-offset>
       <pitch-offset>-15</pitch-offset>
       <eda>5</eda>
-      <life>10</life>
+      <life>3</life>
       <buoyancy>36</buoyancy>
       <wind>true</wind>
+			<random>true</random>
     </submodel>
 		
 		
