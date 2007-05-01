@@ -28,11 +28,19 @@
 											 type="bool">true</extra-details>
 			</camel>
 		</model>
-		
-		<submodels> 
-        <serviceable type="bool">true</serviceable>
-        <path>Aircraft/sopwithCamel/Models/camel-submodels.xml</path>
-      </submodels>
+
+		<ai>
+			<engines>
+				<engine>
+					<smoking type="bool">false</smoking>
+				</engine>
+			</engines>
+		</ai>
+
+		<submodels>
+			<serviceable type="bool">true</serviceable>
+			<path>Aircraft/sopwithCamel/Models/camel-submodels.xml</path>
+		</submodels>
 
 		<view n="0">
 			<internal archive="y">true</internal>

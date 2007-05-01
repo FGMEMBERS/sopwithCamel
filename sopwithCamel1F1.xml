@@ -224,7 +224,7 @@ The reference datum for measurements is the propeller boss.
 
 	<!-- left main spring="0.7"  -1.5845 -->
 	<gear x="-0.9238"
-				y="0.68"
+				y="0.7"
 				z="-1.5631"
 				compression="0.15" 
 				dfric="0.8" 
@@ -238,7 +238,7 @@ The reference datum for measurements is the propeller boss.
 	
 	<!-- right main spring="0.7"  -->
 	<gear x="-0.9234"
-				y="-0.68"
+				y="-0.7"
 				z="-1.5631"
 				compression="0.15"
 				dfric="0.8" 
@@ -260,7 +260,7 @@ The reference datum for measurements is the propeller boss.
 				sfric="0.6" >
 		<control-input axis="/controls/flight/rudder"
 									 control="STEER"
-									 square="true"
+									 square="false"
 									 src0="-1.0"
 									 src1="1.0"
 									 dst0="0.5"
