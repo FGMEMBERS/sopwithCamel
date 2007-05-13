@@ -86,6 +86,12 @@
 													 type="double">1.1044</target-z-offset-m>
 			</config>
 		</view>
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y"
+													 type="double">1.1044</target-z-offset-m>
+			</config>
+		</view>
 
 		<menubar>
 			<default>
