@@ -14,7 +14,7 @@
 		<type>spin</type>
 		<object-name>puff</object-name>
 		<property>sim/time/elapsed-sec</property>
-		<factor>10</factor>
+		<factor>-10</factor>
 		<offset>10</offset>
 	</animation>
 
