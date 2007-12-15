@@ -202,12 +202,13 @@
 		<object-name>tube-upper</object-name>
 		<object-name>tube-lower</object-name>
 	</animation>
-	<animation>
+	
+	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/chrome2.rgb</texture>
 		<object-name>glass</object-name>
-	</animation>
+	</animation>-->
 	
 <!--	******* Rudder ****** -->
 
