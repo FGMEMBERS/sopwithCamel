@@ -32,7 +32,7 @@
 		<ai>
 			<engines>
 				<engine>
-					<smoking type="bool">false</smoking>
+					<smoking type="bool">true</smoking>
 				</engine>
 			</engines>
 		</ai>
