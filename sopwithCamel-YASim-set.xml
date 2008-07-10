@@ -26,6 +26,10 @@
 			<camel>
 				<extra-details archive="y"
 											 type="bool">true</extra-details>
+				<show-pilot archive="y"
+										type="bool">true</show-pilot>
+				<show-face-mask archive="y"
+												type="bool">false</show-face-mask>
 			</camel>
 		</model>
 
@@ -48,12 +52,12 @@
 				<x-offset-m archive="y">0.0</x-offset-m>
 				<!--Right-->
 				<y-offset-m archive="y">0.675</y-offset-m>
-				<!--Up-->
+				<!--Up0.654829-->
 				<z-offset-m archive="y">1.5749</z-offset-m>
 				<!--Back0.475-->
 
 				<pitch-offset-deg>-15</pitch-offset-deg>
-				<default-field-of-view-deg>60</default-field-of-view-deg>
+				<default-field-of-view-deg>65</default-field-of-view-deg>
 			</config>
 		</view>
 		<view n="1">
@@ -105,6 +109,20 @@
 							<property>sim/model/camel/extra-details</property>
 						</binding>
 					</item>
+					<item>
+						<label>Toggle pilot model</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/camel/show-pilot</property>
+						</binding>
+					</item>
+					<item>
+						<label>Toggle pilot face mask</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/camel/show-face-mask</property>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
@@ -135,6 +153,75 @@
 						camel.magneto.togglerightMagswitch();
 
 					</script>
+				</binding>
+			</key>
+			<!-- map keys for seat vertical adjust -->
+			<key n="21">
+				<name>CTRL-U</name>
+				<desc>Seat Default.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/seat/vertical-adjust</property>
+					<value type="double">0</value>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-assign</command>
+					<property>sim/current-view/y-offset-m</property>
+					<value type="double">0.675</value>
+				</binding>
+			</key>
+			<key n="85">
+				<name>U</name>
+				<desc>Seat Down.</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/seat/vertical-adjust</property>
+					<step type="double">-0.01</step>
+					<min type="double">-0.05</min>
+					<max type="double">0.05</max>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-adjust</command>
+					<property>sim/current-view/y-offset-m</property>
+					<step type="double">-0.01</step>
+					<min type="double">0.625</min>
+					<max type="double">0.725</max>
+				</binding>
+			</key>
+			<key n="117">
+				<name>u</name>
+				<desc>Seat Up.</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>controls/seat/vertical-adjust</property>
+					<step type="double">0.01</step>
+					<min type="double">-0.05</min>
+					<max type="double">0.05</max>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-adjust</command>
+					<property>sim/current-view/y-offset-m</property>
+					<step type="double">0.01</step>
+					<min type="double">0.625</min>
+					<max type="double">0.725</max>
 				</binding>
 			</key>
 		</keyboard>

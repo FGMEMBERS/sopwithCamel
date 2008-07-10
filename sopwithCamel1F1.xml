@@ -190,7 +190,7 @@ The reference datum for measurements is the propeller boss.
 							 y="0"
 							 z="-0.095"
 							 mass="440" 
-							 moment="60" 
+							 moment="-60" 
 							 radius="1.4219" 
 							 cruise-speed="96"
 							 cruise-rpm="1300"
