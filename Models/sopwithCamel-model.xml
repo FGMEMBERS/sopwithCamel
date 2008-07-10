@@ -756,10 +756,17 @@
 		<object-name>gun-mounting</object-name>
 		<object-name>hand-pump</object-name>
 		<object-name>rigging-wires</object-name>
-		<object-name>srew-heads-brass</object-name>
-		
+		<object-name>screw-heads-brass</object-name>
 		<condition>
 			<property>sim/model/camel/extra-details</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>pilot</object-name>
+		<condition>
+			<property>sim/model/camel/show-pilot</property>
 		</condition>
 	</animation>
 	

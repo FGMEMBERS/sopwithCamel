@@ -33,7 +33,7 @@ fuelUpdate = func {
     var cross_connected =1;
     if(getprop("/sim/freeze/fuel")) { return registerTimer(); }
 
-    if (flag and !done) {print("sea vixen fuel running"); done = 1};
+    if (flag and !done) {print("Camel fuel running"); done = 1};
 
     AllEngines = props.globals.getNode("engines").getChildren("engine");
 		PortEngine = props.globals.getNode("engines").getChild("engine",0);

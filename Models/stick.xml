@@ -9,6 +9,7 @@
 		<type>rotate</type>
 		<object-name>main_stick</object-name>
 		<object-name>aileron_lever</object-name>
+		<object-name>blip_switch</object-name>
 		<property>controls/flight/aileron</property>
 		<factor>15</factor>
 		<axis>

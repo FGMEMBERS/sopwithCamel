@@ -203,6 +203,7 @@
 		<object-name>tube-lower</object-name>
 	</animation>
 	
+	<!-- removed - causes a bug in plib-->
 	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
@@ -772,6 +773,33 @@
 		</condition>
 	</animation>
 
+	<animation>
+		<type>select</type>
+		<object-name>Propeller-Disk</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[0]/rpm</property>
+					<value>750</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[0]/rpm</property>
+					<value>1000</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>blend</type>
+		<object-name>Propeller-Disk</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<factor>0.001</factor>
+		<!--<offset>-0.5</offset>-->
+		<min>0.9</min>
+		<max>1</max>
+	</animation>
+
 	<!-- *** LoD for the whole model *** -->
 	<animation>
 		<type>range</type>
@@ -786,11 +814,28 @@
 		<object-name>hand-pump</object-name>
 		<object-name>rigging-wires</object-name>
 		<object-name>screw-heads-brass</object-name>
-		
 		<condition>
 			<property>sim/model/camel/extra-details</property>
 		</condition>
 	</animation>
+	
+	<animation> 
+		<type>select</type>
+		<object-name>Mask</object-name>
+		<condition>
+			<property>sim/model/camel/show-face-mask</property>
+		</condition>
+	</animation>
+	
+	<animation> 
+		<type>select</type>
+		<object-name>pilot</object-name>
+		<condition>
+			<property>sim/model/camel/show-pilot</property>
+		</condition>
+	</animation>
+	
+	
 	
 	<animation> 
 		<type>select</type>

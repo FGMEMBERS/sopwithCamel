@@ -59,7 +59,7 @@ initialize = func {
 # set it running on the next update cycle
 	settimer( update, 0 );
 
-	print( "running Camel utilities" );
+	print( "... running Camel utilities" );
 
 } # end func
 

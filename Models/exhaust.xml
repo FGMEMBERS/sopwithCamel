@@ -10,17 +10,19 @@
 		<spherical>true</spherical>
 	</animation>
 	
-	<animation>
+	<!--
+<animation>
 		<type>spin</type>
 		<object-name>puff</object-name>
 		<property>sim/time/elapsed-sec</property>
 		<factor>10</factor>
 		<offset>10</offset>
-	</animation>
-
+	</animation>-->
+	
 	<animation>
 		<type>scale</type>
 		<object-name>puff</object-name>
+		<use-personality>true</use-personality>
 		<property>sim/time/elapsed-sec</property>
 		<x-min>0.1</x-min>
 		<y-min>0.1</y-min>
@@ -32,6 +34,7 @@
 	
 	<animation>
 		<type>blend</type>
+		<use-personality>true</use-personality>
 		<object-name>puff</object-name>
 		<property>sim/time/elapsed-sec</property>
 		<factor>0.2</factor>
