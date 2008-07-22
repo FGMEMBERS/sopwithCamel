@@ -3,7 +3,7 @@
 <PropertyList>
 
 	<path>camel.ac</path>
-	<texture-path>Textures</texture-path>
+	<!--<texture-path>Textures</texture-path>-->
 
 	<offsets>
 		<x-m>1.1044</x-m>
@@ -51,7 +51,7 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Aircraft/sopwithCamel/Models/MkV30hrWatch.xml</path>
 		<offsets>
@@ -161,7 +161,7 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Aircraft/sopwithCamel/Models/vickers.xml</path>
 		<offsets>
@@ -172,14 +172,17 @@
 		</offsets>
 	</model>
 
-<!-- ********* shaders ****** -->
+	<!-- ********* shaders ****** -->
 
 	<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/chrome2.rgb</texture>
-		<object-name>cowl</object-name>
+		<object-name>tube-upper</object-name>
+		<object-name>tube-lower</object-name>
 		<object-name>engine-air-intake</object-name>
+		<object-name>cartridge-chute</object-name>
+
 	</animation>
 
 	<!--
@@ -196,13 +199,27 @@
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/chrome2.rgb</texture>
-		<object-name>fuselage</object-name>
-		<object-name>fuselage-cover-plate-P</object-name>
-		<object-name>fuselage-cover-plate-S</object-name>
-		<object-name>tube-upper</object-name>
-		<object-name>tube-lower</object-name>
+		<object-name>nose</object-name>
 	</animation>
-	
+
+	<animation>
+		<type>select</type>
+		<condition>
+			<property>sim/model/livery/nose-texture</property>
+		</condition>
+		<object-name>nose-textured</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<condition>
+			<not>
+				<property>sim/model/livery/nose-texture</property>
+			</not>
+		</condition>
+		<object-name>nose</object-name>
+	</animation>
+
 	<!-- removed - causes a bug in plib-->
 	<!--<animation>
 		<type>shader</type>
@@ -210,8 +227,8 @@
 		<texture>Textures/chrome2.rgb</texture>
 		<object-name>glass</object-name>
 	</animation>-->
-	
-<!--	******* Rudder ****** -->
+
+	<!--	******* Rudder ****** -->
 
 	<animation>
 		<type>rotate</type>
@@ -229,7 +246,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder-control-wire-S</object-name>
@@ -259,7 +276,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder-control-wire-P</object-name>
@@ -289,9 +306,9 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<!-- ****** Tail Skid ******* -->
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>TailGear</object-name>
@@ -308,7 +325,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>tailskid-control-wire-P</object-name>
@@ -338,7 +355,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>tailskid-control-wire-S</object-name>
@@ -368,10 +385,10 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
-	
+
+
 	<!--  *** ailerons *** -->
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-upper-stbd</object-name>
@@ -386,7 +403,7 @@
 			<z2-m>1.1020</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-link-wire-stbd</object-name>
@@ -403,7 +420,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron_wire_top_S</object-name>
@@ -433,7 +450,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-upper-port</object-name>
@@ -448,7 +465,7 @@
 			<z2-m>1.1020</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-link-wire-port</object-name>
@@ -465,7 +482,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron_wire_top_P</object-name>
@@ -495,7 +512,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-lower-stbd</object-name>
@@ -510,7 +527,7 @@
 			<z2-m>-0.3015</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>control-wire-aileron-S</object-name>
@@ -540,7 +557,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-lower-port</object-name>
@@ -555,7 +572,7 @@
 			<z2-m>-0.3015</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>control-wire-aileron-P</object-name>
@@ -585,14 +602,14 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<!--  *** elevator *** -->
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator</object-name>
 		<property>controls/flight/elevator</property>
-<!--		<factor>20.0</factor>-->
+		<!--		<factor>20.0</factor>-->
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
@@ -616,7 +633,7 @@
 			<z2-m>0.1617</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator-control-wire-lower</object-name>
@@ -646,7 +663,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator-control-wire-upper</object-name>
@@ -693,27 +710,27 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
- 	<animation>
- 		<type>rotate</type>
- 		<object-name>rudder_bar</object-name>
- 		<property>controls/flight/rudder</property>
- 		<factor>15</factor>
- 		<center>
- 			<x-m>-0.343805</x-m>
- 			<y-m>0</y-m>
- 			<z-m>-0.36683</z-m>
- 		</center>
- 		<axis>
- 			<x>0</x>
- 			<y>0</y>
- 			<z>1</z>
- 		</axis>
- 	</animation>
-	
+
 	<animation>
- 		<type>rotate</type>
- 		<object-name>wheel-assmbly-port</object-name>
+		<type>rotate</type>
+		<object-name>rudder_bar</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>15</factor>
+		<center>
+			<x-m>-0.343805</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.36683</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wheel-assmbly-port</object-name>
 		<property>gear/gear/compression-norm</property>
 		<interpolation>
 			<entry>
@@ -725,21 +742,21 @@
 				<dep>20</dep>
 			</entry>
 		</interpolation>
- 		<center>
- 			<x-m>-0.2799</x-m>
- 			<y-m>-0.2026</y-m>
- 			<z-m>-1.2449</z-m>
- 		</center>
- 		<axis>
- 			<x>-1</x>
- 			<y>0</y>
- 			<z>0</z>
- 		</axis>
- 	</animation>
-	
+		<center>
+			<x-m>-0.2799</x-m>
+			<y-m>-0.2026</y-m>
+			<z-m>-1.2449</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
 	<animation>
- 		<type>rotate</type>
- 		<object-name>wheel-assmbly-stbd</object-name>
+		<type>rotate</type>
+		<object-name>wheel-assmbly-stbd</object-name>
 		<property>gear/gear[1]/compression-norm</property>
 		<interpolation>
 			<entry>
@@ -751,18 +768,18 @@
 				<dep>20</dep>
 			</entry>
 		</interpolation>
- 		<center>
- 			<x-m>-0.2799</x-m>
- 			<y-m>0.2026</y-m>
- 			<z-m>-1.2449</z-m>
- 		</center>
- 		<axis>
- 			<x>1</x>
- 			<y>0</y>
- 			<z>0</z>
- 		</axis>
- 	</animation>
-	
+		<center>
+			<x-m>-0.2799</x-m>
+			<y-m>0.2026</y-m>
+			<z-m>-1.2449</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
 	<animation>
 		<type>select</type>
 		<object-name>chocks</object-name>
@@ -807,7 +824,7 @@
 		<max-m>10000</max-m>
 	</animation>
 
-	<animation> 
+	<animation>
 		<type>select</type>
 		<object-name>screw-heads</object-name>
 		<object-name>gun-mounting</object-name>
@@ -818,28 +835,317 @@
 			<property>sim/model/camel/extra-details</property>
 		</condition>
 	</animation>
-	
-	<animation> 
+
+	<animation>
 		<type>select</type>
 		<object-name>Mask</object-name>
 		<condition>
 			<property>sim/model/camel/show-face-mask</property>
 		</condition>
 	</animation>
-	
-	<animation> 
+
+	<animation>
 		<type>select</type>
 		<object-name>pilot</object-name>
 		<condition>
 			<property>sim/model/camel/show-pilot</property>
 		</condition>
 	</animation>
+
+
+	<!-- Material Animations -->
+	<animation>
+		<type>material</type>
+		<!--global type="bool">true</global-->
+		<object-name>wing-upper-top</object-name>
+		<property-base>sim/model/livery/material/Wing-Upper-Top</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<!--global type="bool">true</global-->
+		<object-name>tail</object-name>
+		<property-base>sim/model/livery/material/Tail</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<!--global type="bool">true</global-->
+		<object-name>fuselage-aft</object-name>
+		<property-base>sim/model/livery/material/Fuselage-Aft</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<!--global type="bool">true</global-->
+		<object-name>wheel-r</object-name>
+		<property-base>sim/model/livery/material/Wheel-R</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>wheel-l</object-name>
+		<property-base>sim/model/livery/material/Wheel-L</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>rudder-surface</object-name>
+		<property-base>sim/model/livery/material/Rudder-Surface</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>nose-textured</object-name>
+		<property-base>sim/model/livery/material/Nose-Textured</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>horizontal_stabiliser_fixed</object-name>
+		<property-base>sim/model/livery/material/Horizontal-Stabiliser-Fixed</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>elevator-surface</object-name>
+		<property-base>sim/model/livery/material/Elevator-Surface</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<!--<animation>
+		<type>material</type>
+		-->
+	<!--global type="bool">true</global-->
+	<!--
+		<object-name>Markings-Flap-Port</object-name>
+		<property-base>sim/model/livery/material/Markings-Flap-Port</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>wing-upper-stbd-top</object-name>
+		<property-base>sim/model/livery/material/wing-upper-stbd-top</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>-->
+
+	
+
 	
 	
+
+
 	
-	<animation> 
+
+<!--	<animation>
+		<type>rotate</type>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>velocities/airspeed-kt</property>
+		<factor>3.0</factor>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.83964</x-m>
+			<y-m>-2.97635</y-m>
+			<z-m>0.231815</z-m>
+		</center>
+	</animation>-->
+	
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p1</object-name>
+		<object-name>p2</object-name>
+		<object-name>p3</object-name>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>instrumentation/yawstring</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.492425</x-m>
+			<y-m>-2.97635</y-m>
+			<z-m>0.437871</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p2</object-name>
+		<object-name>p3</object-name>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>velocities/airspeed-kt</property>
+		<factor>-3.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.636724</x-m>
+			<y-m>-2.97201</y-m>
+			<z-m>0.424259</z-m>
+		</center>
+	</animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p2</object-name>
+		<object-name>p3</object-name>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>instrumentation/yawstring</property>
+		<factor>-0.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.636724</x-m>
+			<y-m>-2.97201</y-m>
+			<z-m>0.424259</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p3</object-name>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>velocities/airspeed-kt</property>
+		<factor>-3.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.779905</x-m>
+			<y-m>-2.97647</y-m>
+			<z-m>0.408186</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p3</object-name>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>instrumentation/yawstring</property>
+		<factor>1.0</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.779905</x-m>
+			<y-m>-2.97647</y-m>
+			<z-m>0.408186</z-m>
+		</center>
+	</animation>
+	0.921374	0.393942	2.97647
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>velocities/airspeed-kt</property>
+			<factor>-3.0</factor>
+			<offset-deg>25</offset-deg>
+			<min-deg>0</min-deg>
+			<max-deg>25</max-deg>
+			<axis>
+				<x>0.0</x>
+				<y>1.0</y>
+				<z>0.0</z>
+			</axis>
+		<center>
+			<x-m>0.921374</x-m>
+			<y-m>-2.97647</y-m>
+			<z-m>0.393942</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p4</object-name>
+		<object-name>p5</object-name>
+		<property>instrumentation/yawstring</property>
+		<factor>-0.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.921374</x-m>
+			<y-m>-2.97647</y-m>
+			<z-m>0.393942</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p5</object-name>
+		<property>instrumentation/yawstring</property>
+		<factor>0.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>1.06501</x-m>
+			<y-m>-2.97632</y-m>
+			<z-m>0.379554</z-m>
+		</center>
+	</animation>
+
+	<animation>
 		<type>select</type>
 		<object-name>construction</object-name>
-	</animation>  
+	</animation>
 
 </PropertyList>

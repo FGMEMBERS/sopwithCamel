@@ -18,6 +18,14 @@
 			<name>{ }</name>
 			<desc>toggle left/right magneto switch</desc>
 		</key>
+		<key>
+			<name>u/U</name>
+			<desc>adjust pilot viewpoint up/down</desc>
+		</key>
+		<key>
+			<name>ctrl u</name>
+			<desc>select default pilot viewpoint </desc>
+		</key>
 		<line></line>
 		<line>Approach</line>
 		<line></line>

@@ -22,7 +22,12 @@
 
 		<model>
 			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model-Y.xml</path>
-			<texture-path>Aircraft/sopwithCamel/Models/Textures</texture-path>
+			<livery>
+				<variant type="string" >10 Sqn</variant>
+				<nose-texture type="bool">false</nose-texture>
+			</livery>
+			<variant type="int" >1</variant>
+			<!--<texture-path>Aircraft/sopwithCamel/Models/Textures</texture-path>-->
 			<camel>
 				<extra-details archive="y"
 											 type="bool">true</extra-details>
@@ -224,6 +229,15 @@
 					<max type="double">0.725</max>
 				</binding>
 			</key>
+			<!-- Livery Box -->
+			<key n="108">
+				<name>l</name>
+				<desc>Show livery select dialog</desc>
+				<binding>
+					<command>nasal</command>
+					<script>aircraft.livery.dialog.toggle()</script>
+				</binding>
+			</key>
 		</keyboard>
 	</input>
 	<yasim>
@@ -237,6 +251,7 @@
 		<camel>
 			<file>Aircraft/sopwithCamel/Models/camel-utils.nas</file>
 			<file>Aircraft/sopwithCamel/Models/fuel.nas</file>
+			<file>Aircraft/sopwithCamel/Models/yawstring.nas</file>
 		</camel>
 	</nasal>
 </PropertyList>

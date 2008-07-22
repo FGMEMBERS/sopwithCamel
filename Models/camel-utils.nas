@@ -14,6 +14,12 @@ view_number_Node.setDoubleValue( 0 );
 enabledNode = props.globals.getNode("/sim/headshake/enabled", 1);
 enabledNode.setBoolValue(1);
 
+model_variant_Node = props.globals.getNode("sim/model/variant", 1);
+model_variant_Node.setIntValue(0);
+
+model_index_Node = props.globals.getNode("sim/model/index", 1);
+model_index_Node.setIntValue(0);
+
 controls.fullBrakeTime = 0; 
 
 pilot_g = nil;
@@ -34,7 +40,6 @@ var last_xDivergence = 0;
 var last_yDivergence = 0;
 var last_zDivergence = 0;
 
-
 initialize = func {
 
 	print( "Initializing Camel utilities ..." );
@@ -54,7 +59,29 @@ initialize = func {
 	setlistener( "engines/engine/cranking", func { smoke.updateSmoking(); 
 	} );	
 	setlistener( "engines/engine/running", func { smoke.updateSmoking(); 
-	} );																																							
+	} );
+	
+	 aircraft.livery.init("Aircraft/sopwithCamel/Models/Liveries",
+	    "sim/model/livery/variant",
+	    "sim/model/livery/index"
+	);
+	
+	setlistener("sim/model/variant", func {
+		var index = getprop("sim/model/variant");
+		print("set model index", getprop("/sim/model/variant"));
+		aircraft.livery.set(index);
+	},
+	1);
+	
+	setlistener("/sim/model/livery/variant", func {
+		var name = getprop("sim/model/livery/variant");
+		forindex (var i; aircraft.livery.data){
+            print("variant index: ", aircraft.livery.data[i][0]," [1] ",aircraft.livery.data[i][1]);
+			if(aircraft.livery.data[i][0]== name)
+    			model_variant_Node.setIntValue(i);
+		}
+	},
+	1);																																							
 
 # set it running on the next update cycle
 	settimer( update, 0 );

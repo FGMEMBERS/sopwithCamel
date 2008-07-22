@@ -3,7 +3,7 @@
 <PropertyList>
   <path>tracer2.ac</path>
 
-	<!--<animation>
+	<animation>
 		<type>scale</type>
 		<object-name>tracer</object-name>
 		<x-factor>1</x-factor>
@@ -17,21 +17,21 @@
 			<y-m>0</y-m>
 			<z-m>0</z-m>
 		</center>
-	</animation>-->
+	</animation>
 
-	<!--<animation>
+	<animation>
     <type>dist-scale</type>
     <object-name>tracer</object-name>
-    <factor>3.0</factor>
+    <factor>6.0</factor>
     <offset>0</offset>
 		<min>1.0</min>
-		<max>3.0</max>
+		<max>6.0</max>
 		<center>
       <x-m>0.0</x-m>
       <y-m>0.0</y-m>
       <z-m>0.0</z-m>
     </center>
-  </animation>-->
+  </animation>
 	
 
 	<animation>
