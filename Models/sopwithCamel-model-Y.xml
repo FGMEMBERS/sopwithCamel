@@ -220,6 +220,16 @@
 		<object-name>nose</object-name>
 	</animation>
 
+	<animation>
+		<type>select</type>
+		<condition>
+			<not>
+				<property>sim/model/livery/nose-texture</property>
+			</not>
+		</condition>
+		<object-name>nose</object-name>
+	</animation>
+
 	<!-- removed - causes a bug in plib-->
 	<!--<animation>
 		<type>shader</type>
@@ -852,6 +862,13 @@
 		</condition>
 	</animation>
 
+	<animation>
+		<type>select</type>
+		<object-name>pennants-flight-commander</object-name>
+		<condition>
+			<property>sim/model/camel/show-pennants-flight-commander</property>
+		</condition>
+	</animation>
 
 	<!-- Material Animations -->
 	<animation>
@@ -938,42 +955,13 @@
 		<texture-prop>texture</texture-prop>
 	</animation>-->
 
-	
-
-	
-	
-
-
-	
-
-<!--	<animation>
-		<type>rotate</type>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>velocities/airspeed-kt</property>
-		<factor>3.0</factor>
-		<min-deg>0</min-deg>
-		<max-deg>25</max-deg>
-		<axis>
-			<x>0.0</x>
-			<y>-1.0</y>
-			<z>0.0</z>
-		</axis>
-		<center>
-			<x-m>0.83964</x-m>
-			<y-m>-2.97635</y-m>
-			<z-m>0.231815</z-m>
-		</center>
-	</animation>-->
-	
-
 	<animation>
 		<type>rotate</type>
-		<object-name>p1</object-name>
-		<object-name>p2</object-name>
-		<object-name>p3</object-name>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
+		<object-name>p1-p</object-name>
+		<object-name>p2-p</object-name>
+		<object-name>p3-p</object-name>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
 		<property>instrumentation/yawstring</property>
 		<factor>1.0</factor>
 		<axis>
@@ -990,84 +978,105 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>p2</object-name>
-		<object-name>p3</object-name>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>velocities/airspeed-kt</property>
-		<factor>-3.0</factor>
-		<offset-deg>25</offset-deg>
-		<min-deg>0</min-deg>
-		<max-deg>25</max-deg>
-		<axis>
-			<x>0.0</x>
-			<y>1.0</y>
-			<z>0.0</z>
-		</axis>
-		<center>
-			<x-m>0.636724</x-m>
-			<y-m>-2.97201</y-m>
-			<z-m>0.424259</z-m>
-		</center>
-	</animation>
-
-
-	<animation>
-		<type>rotate</type>
-		<object-name>p2</object-name>
-		<object-name>p3</object-name>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>instrumentation/yawstring</property>
-		<factor>-0.5</factor>
-		<min-deg>-10</min-deg>
-		<max-deg>10</max-deg>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1.0</z>
-		</axis>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1.0</z>
-		</axis>
-		<center>
-			<x-m>0.636724</x-m>
-			<y-m>-2.97201</y-m>
-			<z-m>0.424259</z-m>
-		</center>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-		<object-name>p3</object-name>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>velocities/airspeed-kt</property>
-		<factor>-3.0</factor>
-		<offset-deg>25</offset-deg>
-		<min-deg>0</min-deg>
-		<max-deg>25</max-deg>
-		<axis>
-			<x>0.0</x>
-			<y>1.0</y>
-			<z>0.0</z>
-		</axis>
-		<center>
-			<x-m>0.779905</x-m>
-			<y-m>-2.97647</y-m>
-			<z-m>0.408186</z-m>
-		</center>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-		<object-name>p3</object-name>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>instrumentation/yawstring</property>
+		<object-name>p1-p</object-name>
+		<object-name>p2-p</object-name>
+		<object-name>p3-p</object-name>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/yawstring-flutter</property>
 		<factor>1.0</factor>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.492425</x-m>
+			<y-m>-2.97635</y-m>
+			<z-m>0.437871</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p2-p</object-name>
+		<object-name>p3-p</object-name>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/airstring</property>
+		<factor>-1.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.636724</x-m>
+			<y-m>-2.97201</y-m>
+			<z-m>0.424259</z-m>
+		</center>
+	</animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p2-p</object-name>
+		<object-name>p3-p</object-name>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>-1.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.636724</x-m>
+			<y-m>-2.97201</y-m>
+			<z-m>0.424259</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p3-p</object-name>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/airstring</property>
+		<factor>-1.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.779905</x-m>
+			<y-m>-2.97647</y-m>
+			<z-m>0.408186</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p3-p</object-name>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>1.5</factor>
 		<min-deg>-10</min-deg>
 		<max-deg>10</max-deg>
 		<axis>
@@ -1081,14 +1090,13 @@
 			<z-m>0.408186</z-m>
 		</center>
 	</animation>
-	0.921374	0.393942	2.97647
 
 	<animation>
 		<type>rotate</type>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>velocities/airspeed-kt</property>
-			<factor>-3.0</factor>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/airstring</property>
+			<factor>-1.0</factor>
 			<offset-deg>25</offset-deg>
 			<min-deg>0</min-deg>
 			<max-deg>25</max-deg>
@@ -1106,10 +1114,10 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>p4</object-name>
-		<object-name>p5</object-name>
-		<property>instrumentation/yawstring</property>
-		<factor>-0.5</factor>
+		<object-name>p4-p</object-name>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>-1.5</factor>
 		<min-deg>-10</min-deg>
 		<max-deg>10</max-deg>
 		<axis>
@@ -1126,9 +1134,9 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>p5</object-name>
-		<property>instrumentation/yawstring</property>
-		<factor>0.5</factor>
+		<object-name>p5-p</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>1.5</factor>
 		<min-deg>-10</min-deg>
 		<max-deg>10</max-deg>
 		<axis>
@@ -1139,6 +1147,202 @@
 		<center>
 			<x-m>1.06501</x-m>
 			<y-m>-2.97632</y-m>
+			<z-m>0.379554</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p1-s</object-name>
+		<object-name>p2-s</object-name>
+		<object-name>p3-s</object-name>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/yawstring</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.492425</x-m>
+			<y-m>2.97635</y-m>
+			<z-m>0.437871</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p1-s</object-name>
+		<object-name>p2-s</object-name>
+		<object-name>p3-s</object-name>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.492425</x-m>
+			<y-m>2.97635</y-m>
+			<z-m>0.437871</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p2-s</object-name>
+		<object-name>p3-s</object-name>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/airstring</property>
+		<factor>-1.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.636724</x-m>
+			<y-m>2.97201</y-m>
+			<z-m>0.424259</z-m>
+		</center>
+	</animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p2-s</object-name>
+		<object-name>p3-s</object-name>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>-1.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.636724</x-m>
+			<y-m>2.97201</y-m>
+			<z-m>0.424259</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p3-s</object-name>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/airstring</property>
+		<factor>-1.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.779905</x-m>
+			<y-m>2.97647</y-m>
+			<z-m>0.408186</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p3-s</object-name>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>1.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.779905</x-m>
+			<y-m>2.97647</y-m>
+			<z-m>0.408186</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/airstring</property>
+		<factor>-1.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.921374</x-m>
+			<y-m>2.97647</y-m>
+			<z-m>0.393942</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p4-s</object-name>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>-1.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>0.921374</x-m>
+			<y-m>2.97647</y-m>
+			<z-m>0.393942</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>p5-s</object-name>
+		<property>instrumentation/yawstring-flutter</property>
+		<factor>1.5</factor>
+		<min-deg>-10</min-deg>
+		<max-deg>10</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+		<center>
+			<x-m>1.06501</x-m>
+			<y-m>2.97632</y-m>
 			<z-m>0.379554</z-m>
 		</center>
 	</animation>
