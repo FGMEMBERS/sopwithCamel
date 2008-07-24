@@ -3,6 +3,9 @@
 <PropertyList>
 	<sim>
 		<model>
+			<camel>
+				<show-pennants-flight-commander type="bool">false</show-pennants-flight-commander>
+			</camel>
 			<livery>
 				<variant type="string">209 Sqn - Capt R Brown</variant>
 				<index type="int">2</index>
