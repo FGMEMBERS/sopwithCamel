@@ -7,7 +7,7 @@
 				<show-pennants-flight-commander type="bool">false</show-pennants-flight-commander>
 			</camel>
 			<livery>
-				<variant type="string">209 Sqn - Capt R Brown</variant>
+				<name type="string">209 Sqn - Capt R Brown</name>
 				<index type="int">2</index>
 				<nose-texture type="bool">true</nose-texture>
 				<material>
