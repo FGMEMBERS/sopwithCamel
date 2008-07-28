@@ -23,10 +23,10 @@
 		<model>
 			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model-Y.xml</path>
 			<livery>
-				<variant type="string" >10 Sqn</variant>
+				<file type="string">10sqn</file>
 				<nose-texture type="bool">false</nose-texture>
 			</livery>
-			<variant type="int" >1</variant>
+			<variant type="int" >0</variant>
 			<!--<texture-path>Aircraft/sopwithCamel/Models/Textures</texture-path>-->
 			<camel>
 				<extra-details archive="y"

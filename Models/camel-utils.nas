@@ -4,9 +4,14 @@
 #                                                                                   #
 #####################################################################################
 
-# ================================ Initalize ====================================== 
-# Make sure all needed properties are present and accounted 
+# ================================ Initalize ======================================
+# Make sure all needed properties are present and accounted
 # for, and that they have sane default values.
+
+aircraft.livery.init("Aircraft/sopwithCamel/Models/Liveries", 
+				"sim/model/livery/name", 
+				"sim/model/livery/index"
+				);
 
 view_number_Node = props.globals.getNode("/sim/current-view/view-number",1);
 view_number_Node.setDoubleValue( 0 );
@@ -14,13 +19,13 @@ view_number_Node.setDoubleValue( 0 );
 enabledNode = props.globals.getNode("/sim/headshake/enabled", 1);
 enabledNode.setBoolValue(1);
 
-model_variant_Node = props.globals.getNode("sim/model/variant", 1);
-model_variant_Node.setIntValue(0);
+#model_variant_Node = props.globals.getNode("sim/model/name", 1);
+#model_variant_Node.setIntValue(1);
 
-model_index_Node = props.globals.getNode("sim/model/index", 1);
-model_index_Node.setIntValue(0);
+#model_index_Node = props.globals.getNode("sim/model/index", 1);
+#model_index_Node.setIntValue(1);
 
-controls.fullBrakeTime = 0; 
+controls.fullBrakeTime = 0;
 
 pilot_g = nil;
 headshake = nil;
@@ -42,51 +47,31 @@ var last_zDivergence = 0;
 
 initialize = func {
 
-	print( "Initializing Camel utilities ..." );
+print( "Initializing Camel utilities ..." );
 
 # initialize objects
-	pilot_g = PilotG.new();
-	headshake = HeadShake.new();
-	magneto = Magneto.new();
-	smoke = Smoke.new();
+pilot_g = PilotG.new();
+headshake = HeadShake.new();
+magneto = Magneto.new();
+smoke = Smoke.new();
 
 #set listeners
-	setlistener( "controls/gear/brake-left", func { magneto.blipMagswitch();
-	} );
-	setlistener( "controls/gear/brake-right", func { magneto.blipMagswitch(); 
-	} );
+setlistener( "controls/gear/brake-left", func { magneto.blipMagswitch();
+} );
+setlistener( "controls/gear/brake-right", func { magneto.blipMagswitch();
+} );
 
-	setlistener( "engines/engine/cranking", func { smoke.updateSmoking(); 
-	} );	
-	setlistener( "engines/engine/running", func { smoke.updateSmoking(); 
-	} );
-	
-	 aircraft.livery.init("Aircraft/sopwithCamel/Models/Liveries",
-	    "sim/model/livery/variant",
-	    "sim/model/livery/index"
-	);
-	
-	setlistener("sim/model/variant", func {
-		var index = getprop("sim/model/variant");
-		print("set model index", getprop("/sim/model/variant"));
-		aircraft.livery.set(index);
-	},
-	1);
-	
-	setlistener("/sim/model/livery/variant", func {
-		var name = getprop("sim/model/livery/variant");
-		forindex (var i; aircraft.livery.data){
-            print("variant index: ", aircraft.livery.data[i][0]," [1] ",aircraft.livery.data[i][1]);
-			if(aircraft.livery.data[i][0]== name)
-    			model_variant_Node.setIntValue(i);
-		}
-	},
-	1);																																							
+setlistener( "engines/engine/cranking", func { smoke.updateSmoking();
+} );
+setlistener( "engines/engine/running", func { smoke.updateSmoking();
+} );
+
+
 
 # set it running on the next update cycle
-	settimer( update, 0 );
+settimer( update, 0 );
 
-	print( "... running Camel utilities" );
+print( "... running Camel utilities" );
 
 } # end func
 
@@ -99,14 +84,14 @@ initialize = func {
 ##
 update = func {
 
-	pilot_g.update();
-	pilot_g.gmeter_update();
+pilot_g.update();
+pilot_g.gmeter_update();
 
-	if ( enabledNode.getValue() and view_number_Node.getValue() == 0 ) {
-		headshake.update();
-	}
+if ( enabledNode.getValue() and view_number_Node.getValue() == 0 ) {
+headshake.update();
+}
 
-	settimer( update, 0 ); 
+settimer( update, 0 );
 
 }# end main loop func
 
@@ -117,25 +102,25 @@ update = func {
 
 
 # =================================== fuel tank stuff ===================================
-# Class that specifies fuel cock functions 
-# 
+# Class that specifies fuel cock functions
+#
 FuelCock = {
-	new : func ( name,
-	control,
-	initial_pos
-	){
-		var obj = { parents : [FuelCock] };
-		obj.name = name;
-		obj.control = props.globals.getNode( control, 1 );
-		obj.control.setIntValue( initial_pos );
+new : func ( name,
+control,
+initial_pos
+){
+var obj = { parents : [FuelCock] };
+obj.name = name;
+obj.control = props.globals.getNode( control, 1 );
+obj.control.setIntValue( initial_pos );
 
-		print ( obj.name );
-		return obj;
-	},
+print ( obj.name );
+return obj;
+},
 
 set: func ( pos ) {# operate fuel cock
-	 me.control.setValue( pos );
-	},
+me.control.setValue( pos );
+},
 }; #
 
 
@@ -144,138 +129,138 @@ set: func ( pos ) {# operate fuel cock
 
 
 # =========================== magneto stuff ====================================
-# Class that specifies magneto functions 
+# Class that specifies magneto functions
 #
 Magneto = {
-	new : func ( name = "magneto",
-	right = "controls/engines/engine/mag-switch-right",
-	left = "controls/engines/engine/mag-switch-left",
-	magnetos = "controls/engines/engine/magnetos", 
-	left_brake = "controls/gear/brake-left",
-	right_brake = "controls/gear/brake-right"
-	){
-		var obj = { parents : [Magneto] };
-		obj.name = name;
-		obj.right = props.globals.getNode( right, 1 );
-		obj.left = props.globals.getNode( left, 1 );
-		obj.magnetos = props.globals.getNode( magnetos, 1 );
-		obj.left_brake = props.globals.getNode( left_brake, 1 );
-		obj.right_brake = props.globals.getNode( right_brake, 1 );
-		obj.left.setBoolValue( 0 );
-		obj.right.setBoolValue( 0 );
-		print ( obj.name );
-		return obj;
-	},
+new : func ( name = "magneto",
+right = "controls/engines/engine/mag-switch-right",
+left = "controls/engines/engine/mag-switch-left",
+magnetos = "controls/engines/engine/magnetos",
+left_brake = "controls/gear/brake-left",
+right_brake = "controls/gear/brake-right"
+){
+var obj = { parents : [Magneto] };
+obj.name = name;
+obj.right = props.globals.getNode( right, 1 );
+obj.left = props.globals.getNode( left, 1 );
+obj.magnetos = props.globals.getNode( magnetos, 1 );
+obj.left_brake = props.globals.getNode( left_brake, 1 );
+obj.right_brake = props.globals.getNode( right_brake, 1 );
+obj.left.setBoolValue( 0 );
+obj.right.setBoolValue( 0 );
+print ( obj.name );
+return obj;
+},
 
 updateMagnetos: func{     # set the magneto value according to the switch positions
 # print("updating Magnetos");
-				if (me.left.getValue() and me.right.getValue()){                  # both
-					me.magnetos.setValue( 3 );
-				}
-				elsif (me.left.getValue() and !me.right.getValue()) {             # left
-					me.magnetos.setValue( 1 );
-				}
-				elsif (!me.left.getValue() and me.right.getValue()) {             # right
-					me.magnetos.setValue( 2 );
-				}
-				else{
-					me.magnetos.setValue( 0 );            # none
-				}
+if (me.left.getValue() and me.right.getValue()){                  # both
+me.magnetos.setValue( 3 );
+}
+elsif (me.left.getValue() and !me.right.getValue()) {             # left
+me.magnetos.setValue( 1 );
+}
+elsif (!me.left.getValue() and me.right.getValue()) {             # right
+me.magnetos.setValue( 2 );
+}
+else{
+me.magnetos.setValue( 0 );            # none
+}
 
-	}, # end function
+}, # end function
 
 setleftMagswitch:   func ( left ) {
 
-	me.left.setValue( left );
-	me.updateMagnetos();
+me.left.setValue( left );
+me.updateMagnetos();
 
-	}, # end function
+}, # end function
 
 setrightMagswitch:  func ( right) {
 
-	me.right.setValue( right );
-	me.updateMagnetos();
+me.right.setValue( right );
+me.updateMagnetos();
 
-	}, # end function
+}, # end function
 
 toggleleftMagswitch:    func{
 # print ("left in ", me.left.getValue());
-	var left = me.left.getValue();
-	left = !left;
-	me.left.setBoolValue( left );
-	me.updateMagnetos();
+var left = me.left.getValue();
+left = !left;
+me.left.setBoolValue( left );
+me.updateMagnetos();
 
-	}, # end function
+}, # end function
 
 togglerightMagswitch:   func{
 # print ("right in ", me.right.getValue());
-	var right = me.right.getValue();
-	right = !right;
-	me.right.setBoolValue( right );
-	me.updateMagnetos();
+var right = me.right.getValue();
+right = !right;
+me.right.setBoolValue( right );
+me.updateMagnetos();
 
-	}, # end function
+}, # end function
 
 blipMagswitch:   func{
 # print ("blip in right ", me.right.getValue()," left ", me.left.getValue());
 # print ("blip in brake right ", me.right_brake.getValue()," left ", me.left_brake.getValue());
-	if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {;
-	me.magnetos.setValue( 0 );
-	setprop("sim/model/camel/blip_switch",1);
-	} else {
-		me.updateMagnetos();
-		setprop("sim/model/camel/blip_switch",0);
-	}
+if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {;
+me.magnetos.setValue( 0 );
+setprop("sim/model/camel/blip_switch",1);
+} else {
+me.updateMagnetos();
+setprop("sim/model/camel/blip_switch",0);
+}
 
 # print ("blip out right ", me.right.getValue()," left ", me.left.getValue());
-	}, # end function
-	}; #
+}, # end function
+}; #
 
 
 # =============================== end magneto stuff =========================================
 
 # =============================== Pilot G stuff ================================
-# Class that specifies pilot g functions 
-# 
-	PilotG = {
-		new : func ( name = "pilot-g",
-		acceleration = "accelerations",
-		pilot_g = "pilot-g",
-		g_timeratio = "timeratio", 
-		pilot_g_damped = "pilot-g-damped", 
-		g_min = "pilot-gmin", 
-		g_max = "pilot-gmax"
-		){
-			var obj = { parents : [PilotG] };
-			obj.name = name;
-			obj.accelerations = props.globals.getNode("accelerations", 1);
-			obj.pilot_g = obj.accelerations.getChild( pilot_g, 0, 1 );
-			obj.pilot_g_damped = obj.accelerations.getChild( pilot_g_damped, 0, 1 );
-			obj.g_timeratio = obj.accelerations.getChild( g_timeratio, 0, 1 );
-			obj.g_min = obj.accelerations.getChild( g_min, 0, 1 );
-			obj.g_max = obj.accelerations.getChild( g_max, 0, 1 );
-			obj.pilot_g.setDoubleValue(0);
-			obj.pilot_g_damped.setDoubleValue(0); 
-			obj.g_timeratio.setDoubleValue(0.0075);
-			obj.g_min.setDoubleValue(0);
-			obj.g_max.setDoubleValue(0);
+# Class that specifies pilot g functions
+#
+PilotG = {
+new : func ( name = "pilot-g",
+acceleration = "accelerations",
+pilot_g = "pilot-g",
+g_timeratio = "timeratio",
+pilot_g_damped = "pilot-g-damped",
+g_min = "pilot-gmin",
+g_max = "pilot-gmax"
+){
+var obj = { parents : [PilotG] };
+obj.name = name;
+obj.accelerations = props.globals.getNode("accelerations", 1);
+obj.pilot_g = obj.accelerations.getChild( pilot_g, 0, 1 );
+obj.pilot_g_damped = obj.accelerations.getChild( pilot_g_damped, 0, 1 );
+obj.g_timeratio = obj.accelerations.getChild( g_timeratio, 0, 1 );
+obj.g_min = obj.accelerations.getChild( g_min, 0, 1 );
+obj.g_max = obj.accelerations.getChild( g_max, 0, 1 );
+obj.pilot_g.setDoubleValue(0);
+obj.pilot_g_damped.setDoubleValue(0);
+obj.g_timeratio.setDoubleValue(0.0075);
+obj.g_min.setDoubleValue(0);
+obj.g_max.setDoubleValue(0);
 
-			print ( obj.name );
-			return obj;
-		},
+print ( obj.name );
+return obj;
+},
 update : func () {
-		var n = me.g_timeratio.getValue(); 
-		var g = me.pilot_g.getValue();
-		var g_damp = me.pilot_g_damped.getValue();
+var n = me.g_timeratio.getValue();
+var g = me.pilot_g.getValue();
+var g_damp = me.pilot_g_damped.getValue();
 
-		g_damp = ( g * n) + (g_damp * (1 - n));
+g_damp = ( g * n) + (g_damp * (1 - n));
 
-		me.pilot_g_damped.setDoubleValue(g_damp);
+me.pilot_g_damped.setDoubleValue(g_damp);
 
 # print(sprintf("pilot_g_damped in=%0.5f, out=%0.5f", g, g_damp));
-		},
+},
 gmeter_update : func () {
-		if( me.pilot_g_damped.getValue() < me.g_min.getValue() ){
+if( me.pilot_g_damped.getValue() < me.g_min.getValue() ){
 			me.g_min.setDoubleValue( me.pilot_g_damped.getValue() );
 		} elsif( me.pilot_g_damped.getValue() > me.g_max.getValue() ){
 			me.g_max.setDoubleValue( me.pilot_g_damped.getValue() );

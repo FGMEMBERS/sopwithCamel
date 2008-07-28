@@ -5,6 +5,16 @@
 	<path>camel.ac</path>
 	<!--<texture-path>Textures</texture-path>-->
 
+	<nasal>
+		<load>
+			var livery_update = aircraft.livery_update.new(
+				"Aircraft/sopwithCamel/Models/Liveries", 10);
+		</load>
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
 	<offsets>
 		<x-m>1.1044</x-m>
 		<y-m>0</y-m>
@@ -871,12 +881,19 @@
 	</animation>
 
 	<!-- Material Animations -->
+
+
+	<property-base>sim/model/livery</property-base>
+	<texture-prop>texture</texture-prop>
+	
+	
 	<animation>
 		<type>material</type>
 		<!--global type="bool">true</global-->
 		<object-name>wing-upper-top</object-name>
 		<property-base>sim/model/livery/material/Wing-Upper-Top</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_plan.png</texture>
 	</animation>
 
 	<animation>
@@ -885,6 +902,7 @@
 		<object-name>tail</object-name>
 		<property-base>sim/model/livery/material/Tail</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_plan.png</texture>
 	</animation>
 
 	<animation>
@@ -893,6 +911,7 @@
 		<object-name>fuselage-aft</object-name>
 		<property-base>sim/model/livery/material/Fuselage-Aft</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_side.png</texture>
 	</animation>
 
 	<animation>
@@ -901,6 +920,7 @@
 		<object-name>wheel-r</object-name>
 		<property-base>sim/model/livery/material/Wheel-R</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_side.png</texture>
 	</animation>
 
 	<animation>
@@ -908,6 +928,7 @@
 		<object-name>wheel-l</object-name>
 		<property-base>sim/model/livery/material/Wheel-L</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_side.png</texture>
 	</animation>
 
 	<animation>
@@ -915,6 +936,7 @@
 		<object-name>rudder-surface</object-name>
 		<property-base>sim/model/livery/material/Rudder-Surface</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_side.png</texture>
 	</animation>
 
 	<animation>
@@ -922,6 +944,7 @@
 		<object-name>nose-textured</object-name>
 		<property-base>sim/model/livery/material/Nose-Textured</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_side.png</texture>
 	</animation>
 
 	<animation>
@@ -929,6 +952,7 @@
 		<object-name>horizontal_stabiliser_fixed</object-name>
 		<property-base>sim/model/livery/material/Horizontal-Stabiliser-Fixed</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_plan.png</texture>
 	</animation>
 
 	<animation>
@@ -936,6 +960,7 @@
 		<object-name>elevator-surface</object-name>
 		<property-base>sim/model/livery/material/Elevator-Surface</property-base>
 		<texture-prop>texture</texture-prop>
+		<texture>Liveries/camel_plan.png</texture>
 	</animation>
 
 	<!--<animation>
