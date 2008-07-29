@@ -7,8 +7,56 @@
 
 	<nasal>
 		<load>
+			print("LOAD camel ", cmdarg().getPath());
+			var self = cmdarg();
+			var float0_in = self.getNode("sim/multiplay/generic/float[0]", 1);
+			var float0_out = self.getNode("instrumentation/yawstring[0]", 1);
+
+			var float1_in = self.getNode("sim/multiplay/generic/float[1]", 1);
+			var float1_out = self.getNode("instrumentation/airstring[0]", 1);
+
+			var float2_in = self.getNode("sim/multiplay/generic/float[2]", 1);
+			var float2_out = self.getNode("instrumentation/yawstring-flutter[0]", 1);
+
+			var bool0_out = self.getNode("sim/model/camel/show-pilot[0]", 1);
+			bool0_out.setValue(1);
+			
+			var bool0_in = self.getNode("sim/multiplay/generic/int[0]", 1);
+			var bool2_out = self.getNode("sim/model/camel/show-face-mask", 1);
+			
+			var bool1_in = self.getNode("sim/multiplay/generic/int[1]", 1);
+			var bool1_out = self.getNode("controls/gear/brake-parking[0]", 1);
+			var bool1a_out = self.getNode("gear/gear[0]/wow", 1);
+			var bool1b_out = self.getNode("gear/gear[1]/wow", 1);
+
 			var livery_update = aircraft.livery_update.new(
-				"Aircraft/sopwithCamel/Models/Liveries", 10);
+			"Aircraft/sopwithCamel/Models/Liveries", 10,
+			func { print("sopwithCamel livery update started") });
+
+			var update = func {
+			#print ("update function running");
+			float0_out.setValue(float0_in.getValue());
+			float1_out.setValue(float1_in.getValue());
+			float2_out.setValue(float2_in.getValue());
+			#print ("update function in: ", float1_in.getValue(), " out ", float1_out.getValue() );
+			settimer (update, 0);
+			}
+
+			var updatebool = func {
+			print ("update bool function running");
+			#bool0_out.setValue(bool0_in.getValue());
+
+			bool1_out.setValue(bool1_in.getValue());
+			bool1a_out.setValue(bool1_in.getValue());
+			bool1b_out.setValue(bool1_in.getValue());
+
+			bool2_out.setValue(bool0_in.getValue());
+			print ("update bool function in: ", bool0_in.getValue(), " out ", bool2_out.getValue() );
+			settimer (updatebool, 10);
+			}
+
+			update();
+			updatebool();
 		</load>
 		<unload>
 			livery_update.stop();

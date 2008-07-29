@@ -51,6 +51,21 @@
 			<path>Aircraft/sopwithCamel/Models/camel-submodels.xml</path>
 		</submodels>
 
+		<multiplay>
+			<generic>
+				<int n="0"
+							type="int"/>
+				<int n="1"
+						 type="int"/>
+				<float n="0"
+							 type="float"/>
+				<float n="1"
+							 type="float"/>
+				<float n="2"
+							 type="float"/>
+			</generic>
+		</multiplay>
+
 		<view n="0">
 			<internal archive="y">true</internal>
 			<config>
