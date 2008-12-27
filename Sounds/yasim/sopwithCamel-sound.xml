@@ -28,7 +28,7 @@
 
 		<engine>
 			<name>engine</name>
-			<path>Aircraft/sopwithCamel/Sounds/yasim/leclerget1.wav</path>
+			<path>Aircraft/sopwithCamel/Sounds/yasim/leclerget.wav</path>
 			<mode>looped</mode>
 			<property>/engines/engine/running</property>
 			<volume>
