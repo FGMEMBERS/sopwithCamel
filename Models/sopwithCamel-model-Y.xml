@@ -20,10 +20,10 @@
 
 			var bool0_out = self.getNode("sim/model/camel/show-pilot[0]", 1);
 			bool0_out.setValue(1);
-			
+
 			var bool0_in = self.getNode("sim/multiplay/generic/int[0]", 1);
 			var bool2_out = self.getNode("sim/model/camel/show-face-mask", 1);
-			
+
 			var bool1_in = self.getNode("sim/multiplay/generic/int[1]", 1);
 			var bool1_out = self.getNode("controls/gear/brake-parking[0]", 1);
 			var bool1a_out = self.getNode("gear/gear[0]/wow", 1);
@@ -929,12 +929,9 @@
 	</animation>
 
 	<!-- Material Animations -->
-
-
 	<property-base>sim/model/livery</property-base>
 	<texture-prop>texture</texture-prop>
-	
-	
+
 	<animation>
 		<type>material</type>
 		<!--global type="bool">true</global-->
@@ -1169,15 +1166,15 @@
 		<object-name>p4-p</object-name>
 		<object-name>p5-p</object-name>
 		<property>instrumentation/airstring</property>
-			<factor>-1.0</factor>
-			<offset-deg>25</offset-deg>
-			<min-deg>0</min-deg>
-			<max-deg>25</max-deg>
-			<axis>
-				<x>0.0</x>
-				<y>1.0</y>
-				<z>0.0</z>
-			</axis>
+		<factor>-1.0</factor>
+		<offset-deg>25</offset-deg>
+		<min-deg>0</min-deg>
+		<max-deg>25</max-deg>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
 		<center>
 			<x-m>0.921374</x-m>
 			<y-m>-2.97647</y-m>
@@ -1418,6 +1415,39 @@
 			<y-m>2.97632</y-m>
 			<z-m>0.379554</z-m>
 		</center>
+	</animation>
+
+	<animation>
+		<type>spin</type>
+		<object-name>wheel-l</object-name>
+		<property>gear/gear/rollspeed-ms</property>
+		<factor>26.8994</factor>
+		<center>
+			<x-m>-0.276999</x-m>
+			<y-m>-0.769777</y-m>
+			<z-m>-1.23008</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>spin</type>
+		<object-name>wheel-r</object-name>
+		<property>gear/gear[1]/rollspeed-ms</property>
+		<factor>26.8994</factor>
+		<center>
+			<x-m>-0.276999</x-m>
+			<y-m>0.769777</y-m>
+			<z-m>-1.23008</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
 	</animation>
 
 	<animation>

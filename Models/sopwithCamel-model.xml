@@ -51,7 +51,7 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Aircraft/sopwithCamel/Models/MkV30hrWatch.xml</path>
 		<offsets>
@@ -161,7 +161,7 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Aircraft/sopwithCamel/Models/vickers.xml</path>
 		<offsets>
@@ -172,7 +172,7 @@
 		</offsets>
 	</model>
 
-<!-- ********* shaders ****** -->
+	<!-- ********* shaders ****** -->
 
 	<animation>
 		<type>shader</type>
@@ -202,14 +202,15 @@
 		<object-name>tube-upper</object-name>
 		<object-name>tube-lower</object-name>
 	</animation>
+
 	<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/chrome2.rgb</texture>
 		<object-name>glass</object-name>
 	</animation>
-	
-<!--	******* Rudder ****** -->
+
+	<!--	******* Rudder ****** -->
 
 	<animation>
 		<type>rotate</type>
@@ -227,7 +228,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder-control-wire-S</object-name>
@@ -257,7 +258,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder-control-wire-P</object-name>
@@ -287,9 +288,9 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<!-- ****** Tail Skid ******* -->
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>TailGear</object-name>
@@ -306,7 +307,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>tailskid-control-wire-P</object-name>
@@ -336,7 +337,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>tailskid-control-wire-S</object-name>
@@ -366,10 +367,10 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
-	
+
+
 	<!--  *** ailerons *** -->
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-upper-stbd</object-name>
@@ -384,7 +385,7 @@
 			<z2-m>1.1020</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-link-wire-stbd</object-name>
@@ -401,7 +402,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron_wire_top_S</object-name>
@@ -431,7 +432,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-upper-port</object-name>
@@ -446,7 +447,7 @@
 			<z2-m>1.1020</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-link-wire-port</object-name>
@@ -463,7 +464,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron_wire_top_P</object-name>
@@ -493,7 +494,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-lower-stbd</object-name>
@@ -508,7 +509,7 @@
 			<z2-m>-0.3015</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>control-wire-aileron-S</object-name>
@@ -538,7 +539,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-lower-port</object-name>
@@ -553,7 +554,7 @@
 			<z2-m>-0.3015</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>control-wire-aileron-P</object-name>
@@ -583,14 +584,14 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<!--  *** elevator *** -->
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator</object-name>
 		<property>controls/flight/elevator</property>
-<!--		<factor>20.0</factor>-->
+		<!--		<factor>20.0</factor>-->
 		<interpolation>
 			<entry>
 				<ind>-1</ind>
@@ -614,7 +615,7 @@
 			<z2-m>0.1617</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator-control-wire-lower</object-name>
@@ -644,7 +645,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator-control-wire-upper</object-name>
@@ -691,58 +692,56 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
- 	<animation>
- 		<type>rotate</type>
- 		<object-name>rudder_bar</object-name>
- 		<property>controls/flight/rudder</property>
- 		<factor>15</factor>
- 		<center>
- 			<x-m>-0.343805</x-m>
- 			<y-m>0</y-m>
- 			<z-m>-0.36683</z-m>
- 		</center>
- 		<axis>
- 			<x>0</x>
- 			<y>0</y>
- 			<z>1</z>
- 		</axis>
- 	</animation>
-	
-	<animation>
- 		<type>rotate</type>
- 		<object-name>wheel-assmbly-port</object-name>
-		<offset-deg>3</offset-deg>
- 		<center>
- 			<x-m>-0.2732</x-m>
- 			<y-m>-0.2026</y-m>
- 			<z-m>-0.2451</z-m>
- 		</center>
- 		<axis>
- 			<x>-1</x>
- 			<y>0</y>
- 			<z>0</z>
- 		</axis>
- 	</animation>
-	
-	<animation>
- 		<type>rotate</type>
- 		<object-name>wheel-assmbly-stbd</object-name>
-		<offset-deg>3</offset-deg>
- 		<center>
- 			<x-m>-0.2732</x-m>
- 			<y-m>0.2026</y-m>
- 			<z-m>-0.2451</z-m>
- 		</center>
- 		<axis>
- 			<x>1</x>
- 			<y>0</y>
- 			<z>0</z>
- 		</axis>
- 	</animation>
 
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder_bar</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>15</factor>
+		<center>
+			<x-m>-0.343805</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.36683</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
 
-	
+	<animation>
+		<type>rotate</type>
+		<object-name>wheel-assmbly-port</object-name>
+		<offset-deg>3</offset-deg>
+		<center>
+			<x-m>-0.2732</x-m>
+			<y-m>-0.2026</y-m>
+			<z-m>-0.2451</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>wheel-assmbly-stbd</object-name>
+		<offset-deg>3</offset-deg>
+		<center>
+			<x-m>-0.2732</x-m>
+			<y-m>0.2026</y-m>
+			<z-m>-0.2451</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
 	<!-- *** LoD for the whole model *** -->
 	<animation>
 		<type>range</type>
@@ -750,7 +749,7 @@
 		<max-m>10000</max-m>
 	</animation>
 
-	<animation> 
+	<animation>
 		<type>select</type>
 		<object-name>screw-heads</object-name>
 		<object-name>gun-mounting</object-name>
@@ -769,10 +768,10 @@
 			<property>sim/model/camel/show-pilot</property>
 		</condition>
 	</animation>
-	
-	<animation> 
+
+	<animation>
 		<type>select</type>
 		<object-name>construction</object-name>
-	</animation>  
+	</animation>
 
 </PropertyList>

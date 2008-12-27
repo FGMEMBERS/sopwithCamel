@@ -16,7 +16,7 @@ var yawstring = func {
 
 	# we derive a sine based factor to give us smoothly
 	# varying value between -1 and 1
-	var factor  = math.sin(aircraft.D2R * (elapsed_time * 100 * airspeed/10));
+	var factor  = math.sin(globals.D2R * (elapsed_time * 100 * airspeed/10));
 	var h_angle = 10 * factor;
 
 	#30% variation of airspeed

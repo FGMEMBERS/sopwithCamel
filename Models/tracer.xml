@@ -3,36 +3,27 @@
 <PropertyList>
   <path>tracer2.ac</path>
 
-	<animation>
-		<type>scale</type>
-		<object-name>tracer</object-name>
-		<x-factor>1</x-factor>
-		<x-offset>0.1</x-offset>
-		<y-factor>1</y-factor>
-		<y-offset>0.1</y-offset>
-		<z-factor>1</z-factor>
-		<z-offset>0.1</z-offset>
-		<center>
-			<x-m>0</x-m>
+	<model>
+		<path>Models/Geometry/smoke.xml</path>
+		<name>smoke</name>
+		<offsets>
+			<x-m>10.0</x-m>
 			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</center>
-	</animation>
+			<z-m>-1.43238</z-m>
+		</offsets>
+	</model>
 
 	<animation>
-    <type>dist-scale</type>
-    <object-name>tracer</object-name>
-    <factor>6.0</factor>
-    <offset>0</offset>
-		<min>1.0</min>
-		<max>6.0</max>
+		<type>dist-scale</type>
+		<object-name>tracer</object-name>
+		<factor>0.001</factor>
+		<offset>0</offset>
 		<center>
-      <x-m>0.0</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.0</z-m>
-    </center>
-  </animation>
-	
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+	</animation>
 
 	<animation>
 		<type>material</type>

@@ -4,7 +4,7 @@ OBJECT world
 kids 1
 OBJECT poly
 name "tracer"
-loc 0 5.51895e-008 2.20758e-007
+loc 0 5.51894e-008 2.20757e-007
 texture "Textures/tracer2.rgb"
 crease 61.000000
 numvert 13
@@ -14,7 +14,7 @@ numvert 13
 0 1.5 0
 0 1.29904 -0.75
 0 0.75 -1.29904
-0 -2.48353e-007 -1.5
+0 -2.48352e-007 -1.5
 0 -0.75 -1.29904
 0 -1.29904 -0.75
 0 -1.5 4.41516e-007
