@@ -19,7 +19,11 @@
 
 		<virtual-cockpit archive="y">true</virtual-cockpit>
 		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
-
+		<rendering>
+			<camera-group>
+				<znear type="double">0.1</znear>
+			</camera-group>
+		</rendering>
 		<model>
 			<path>Aircraft/sopwithCamel/Models/sopwithCamel-model-Y.xml</path>
 			<livery>
