@@ -43,7 +43,7 @@
 			}
 
 			var updatebool = func {
-			print ("update bool function running");
+			#print ("update bool function running");
 			#bool0_out.setValue(bool0_in.getValue());
 
 			bool1_out.setValue(bool1_in.getValue());
@@ -51,7 +51,7 @@
 			bool1b_out.setValue(bool1_in.getValue());
 
 			bool2_out.setValue(bool0_in.getValue());
-			print ("update bool function in: ", bool0_in.getValue(), " out ", bool2_out.getValue() );
+			#print ("update bool function in: ", bool0_in.getValue(), " out: ", bool2_out.getValue() );
 			settimer (updatebool, 10);
 			}
 
@@ -243,15 +243,13 @@
 
 	</animation>
 
-	<!--
-	<animation>
+	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/brass.rgb</texture>
 		<object-name>switch_body</object-name>
 		<object-name>knob</object-name>
-	</animation>
-	-->
+	</animation>-->
 
 	<animation>
 		<type>shader</type>
@@ -911,12 +909,22 @@
 			<property>sim/model/camel/show-face-mask</property>
 		</condition>
 	</animation>
-
+	
 	<animation>
 		<type>select</type>
 		<object-name>pilot</object-name>
 		<condition>
-			<property>sim/model/camel/show-pilot</property>
+			<or>
+				<not>
+					<property>sim/model/camel/show-pilot</property>
+				</not>
+				<not>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>0</value>
+					</equals>
+				</not>
+			</or>
 		</condition>
 	</animation>
 
