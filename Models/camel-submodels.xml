@@ -82,7 +82,7 @@
 
 	<submodel>
 		<name>Vickers R </name>
-		<model>Aircraft/sopwithCamel/Models/tracer.xml</model>
+		<model>/Aircraft/sopwithCamel/Models/tracer.xml</model>
 		<trigger>ai/submodels/trigger</trigger>
 		<speed>2444.2</speed>
 		<repeat>true</repeat>
@@ -107,7 +107,7 @@
 
 	<submodel>
 		<name>Vickers R smoke</name>
-		<model>Aircraft/sopwithCamel/Models/smoke.xml</model>
+		<model>/Aircraft/sopwithCamel/Models/smoke.xml</model>
 		<trigger>ai/submodels/trigger</trigger>
 		<speed>10</speed>
 		<repeat>true</repeat>
@@ -127,8 +127,8 @@
 
 	<submodel>
 		<name>exhaust smoke r </name>
-		<model>Aircraft/sopwithCamel/Models/exhaust.xml</model>
-		<trigger>/sim/ai/engines/engine/smoking</trigger>
+		<model>/Aircraft/sopwithCamel/Models/exhaust.xml</model>
+		<trigger>sim/ai/engines/engine/smoking</trigger>
 		<speed>5</speed>
 		<repeat>true</repeat>
 		<delay>0.1</delay>
@@ -147,7 +147,7 @@
 	
 	<submodel>
 		<name>exhaust smoke l </name>
-		<model>Aircraft/sopwithCamel/Models/exhaust2.xml</model>
+		<model>/Aircraft/sopwithCamel/Models/exhaust2.xml</model>
 		<trigger>/sim/ai/engines/engine/smoking</trigger>
 		<speed>5</speed>
 		<repeat>true</repeat>
