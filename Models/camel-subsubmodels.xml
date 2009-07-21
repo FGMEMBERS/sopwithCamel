@@ -44,7 +44,7 @@
 	<submodel>
 		<name>Vickers impact smoke</name>
 		<model>Aircraft/sopwithCamel/Models/smoke-impact.xml</model>
-		<!--<trigger>ai/submodels/trigger</trigger>-->
+		<trigger>ai/submodels/trigger</trigger>
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>
