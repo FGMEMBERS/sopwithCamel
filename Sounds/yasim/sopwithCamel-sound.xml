@@ -47,7 +47,28 @@
 			</pitch>
 		</engine>
 
-		<wind>
+    <birds>
+      <name>birdsong</name>
+      <mode>looped</mode>
+      <path>Aircraft/sopwithCamel/Sounds/yasim/birdsong.wav</path>
+      <!--<path>Aircraft/MPCarrier/Sounds/anchorsAweigh.wav</path>-->
+      <!--<property>/velocities/airspeed-kt</property>-->
+      <condition>
+        <equals>
+          <property>/sim/startup/season</property>
+          <value>summer</value>
+        </equals>
+      </condition>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.0010</factor>
+        <offset>0.1</offset>
+        <min>0.01</min>
+        <max>0.1</max>
+      </volume>
+    </birds>
+
+    <wind>
 			<name>wind</name>
 			<mode>looped</mode>
 			<path>Sounds/wind.wav</path>
