@@ -232,7 +232,7 @@
 
 	<!-- ********* shaders ****** -->
 
-	<animation>
+	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/chrome2.rgb</texture>
@@ -240,8 +240,17 @@
 		<object-name>tube-lower</object-name>
 		<object-name>engine-air-intake</object-name>
 		<object-name>cartridge-chute</object-name>
+	</animation>-->
 
-	</animation>
+  <effect>
+    <inherits-from>Effects/camelreflect</inherits-from>
+    <!--<texture>Textures/chrome2.rgb</texture>-->
+    <object-name>tube-upper</object-name>
+    <object-name>tube-lower</object-name>
+    <object-name>engine-air-intake</object-name>
+    <object-name>cartridge-chute</object-name>
+    <object-name>fuselage-duct</object-name>
+  </effect>
 
 	<!--<animation>
 		<type>shader</type>
@@ -251,13 +260,18 @@
 		<object-name>knob</object-name>
 	</animation>-->
 
-	<animation>
+	<!--<animation>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>Textures/chrome2.rgb</texture>
-		<object-name>nose</object-name>
-	</animation>
+		
+	</animation>-->
 
+  <effect>
+    <inherits-from>Effects/camelreflect</inherits-from>
+    <object-name>nose</object-name>
+  </effect>
+  
 	<animation>
 		<type>select</type>
 		<condition>
