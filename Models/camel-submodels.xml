@@ -40,7 +40,7 @@
 	<submodel>
 		<name>Vickers L</name>
 		<model>Aircraft/sopwithCamel/Models/tracer.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
+		<trigger>controls/armament/trigger</trigger>
 		<speed>2444.2</speed>
 		<repeat>true</repeat>
 		<delay>0.4720</delay>
@@ -64,7 +64,7 @@
 	<submodel>
 		<name>Vickers L smoke</name>
 		<model>Aircraft/sopwithCamel/Models/smoke.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
+		<trigger>controls/armament/trigger</trigger>
 		<speed>10</speed>
 		<repeat>true</repeat>
 		<delay>0.052631579</delay>
@@ -83,7 +83,7 @@
 	<submodel>
 		<name>Vickers R </name>
 		<model>/Aircraft/sopwithCamel/Models/tracer.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
+		<trigger>controls/armament/trigger</trigger>
 		<speed>2444.2</speed>
 		<repeat>true</repeat>
 		<delay>0.4510</delay>
@@ -108,7 +108,7 @@
 	<submodel>
 		<name>Vickers R smoke</name>
 		<model>/Aircraft/sopwithCamel/Models/smoke.xml</model>
-		<trigger>ai/submodels/trigger</trigger>
+		<trigger>controls/armament/trigger</trigger>
 		<speed>10</speed>
 		<repeat>true</repeat>
 		<delay>0.052631579</delay>

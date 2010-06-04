@@ -31,6 +31,14 @@
 			<path>Aircraft/sopwithCamel/Sounds/yasim/leclerget.wav</path>
 			<mode>looped</mode>
 			<property>/engines/engine/running</property>
+      <orientation>
+        <x>-0.75</x>
+        <y>0.0</y>
+        <z>-0.17</z>
+        <inner-angle>30.0</inner-angle>
+        <outer-angle>100.0</outer-angle>
+        <outer-gain>0.0</outer-gain>
+      </orientation>
 			<volume>
 				<property>/engines/engine/mp-osi</property>
 				<factor>0.035</factor>
@@ -98,7 +106,7 @@
 			<mode>looped</mode>
 			<path>Aircraft/sopwithCamel/Sounds/yasim/vickers.wav</path>
 			<condition>
-				<property>ai/submodels/trigger</property>
+				<property>controls/armament/trigger</property>
 				<property>ai/submodels/submodel/count</property>
 			</condition>
 			<volume>
