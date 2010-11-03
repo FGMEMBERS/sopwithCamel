@@ -38,7 +38,7 @@
 				<show-pilot archive="y"
 										type="bool">true</show-pilot>
 				<show-pennants-flight-commander archive="y"
-												type="bool">true</show-pennants-flight-commander>
+																				type="bool">true</show-pennants-flight-commander>
 			</camel>
 		</model>
 
@@ -58,7 +58,7 @@
 		<multiplay>
 			<generic>
 				<int n="0"
-							type="int"/>
+						 type="int"/>
 				<int n="1"
 						 type="int"/>
 				<float n="0"
@@ -120,6 +120,34 @@
 													 type="double">1.1044</target-z-offset-m>
 			</config>
 		</view>
+		<view n="105">
+			<name>Ground Crew View</name>
+			<type>lookfrom</type>
+			<config>
+				<internal type="bool">true</internal>
+				<from-model type="bool">false</from-model>
+				<!--<from-model-idx type="int">0</from-model-idx>-->
+				<eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+				<eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+				<eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+				<eye-roll-deg-path>/sim/tower/roll-deg</eye-roll-deg-path>
+				<eye-pitch-deg-path>/sim/tower/pitch-deg</eye-pitch-deg-path>
+				<eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>				<at-model type="bool">false</at-model>
+				<at-model-idx type="int">0</at-model-idx>
+				<ground-level-nearplane-m type="double">0.1f</ground-level-nearplane-m>
+
+				<!-- back -->
+				<heading-offset-deg>180</heading-offset-deg>
+				<x-offset-m>0</x-offset-m>
+				<!-- right -->
+				<y-offset-m>-0.0</y-offset-m>
+				<!-- up -->
+				<z-offset-m>-10.0</z-offset-m>
+				<!-- back -->
+				<pitch-offset-deg>0</pitch-offset-deg>
+				<default-field-of-view-deg>60</default-field-of-view-deg>
+			</config>
+		</view>
 
 		<menubar>
 			<default>
@@ -160,7 +188,7 @@
 	</sim>
 
 	<input>
-		<keyboard>
+		<keyboard include="../Generic/WalkView/walk-view-keys.xml">
 			<!-- map keys for mag switches  -->
 			<key n="123">
 				<name>{</name>
@@ -279,5 +307,11 @@
 			<file>Aircraft/sopwithCamel/Models/fuel.nas</file>
 			<file>Aircraft/sopwithCamel/Models/yawstring.nas</file>
 		</camel>
+		<walkview>
+			<file>Aircraft/Generic/WalkView/walkview.nas</file>
+		</walkview>
+		<walkviews>
+			<file>Aircraft/sopwithCamel/Models/camel-walk-views.nas</file>
+		</walkviews>
 	</nasal>
 </PropertyList>
