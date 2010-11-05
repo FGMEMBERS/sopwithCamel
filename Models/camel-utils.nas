@@ -83,6 +83,10 @@ initialize = func {
     magneto = Magneto.new();
     smoke = Smoke.new();
 
+    setprop("sim/model/position/latitude-deg", getprop("position/latitude-deg"));
+    setprop("sim/model/position/longitude-deg", getprop("position/longitude-deg"));
+    setprop("sim/model/position/altitude-ft", getprop("position/altitude-ft"));
+
 #set listeners
     setlistener( "controls/gear/brake-left", func { magneto.blipMagswitch();
     } );
@@ -533,6 +537,6 @@ updateSmoking: func{     # set the smoke value according to the engine condition
 
 # Fire it up
 
-    settimer(initialize,0);
+setlistener("sim/signals/fdm-initialized", initialize);
 
 # end 

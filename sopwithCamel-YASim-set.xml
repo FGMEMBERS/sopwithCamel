@@ -124,15 +124,16 @@
 			<name>Ground Crew View</name>
 			<type>lookfrom</type>
 			<config>
-				<internal type="bool">true</internal>
+				<internal type="bool">false</internal>
 				<from-model type="bool">false</from-model>
 				<!--<from-model-idx type="int">0</from-model-idx>-->
-				<eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
-				<eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
-				<eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+				<eye-lat-deg-path>/sim/model/position/latitude-deg</eye-lat-deg-path>
+				<eye-lon-deg-path>/sim/model/position/longitude-deg</eye-lon-deg-path>
+				<eye-alt-ft-path>/sim/model/position/altitude-ft</eye-alt-ft-path>
 				<eye-roll-deg-path>/sim/tower/roll-deg</eye-roll-deg-path>
 				<eye-pitch-deg-path>/sim/tower/pitch-deg</eye-pitch-deg-path>
-				<eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>				<at-model type="bool">false</at-model>
+				<eye-heading-deg-path>/sim/tower/heading-deg</eye-heading-deg-path>
+				<at-model type="bool">false</at-model>
 				<at-model-idx type="int">0</at-model-idx>
 				<ground-level-nearplane-m type="double">0.1f</ground-level-nearplane-m>
 

@@ -10,26 +10,9 @@
 
 # Constraints
 
-var WOW = getprop("gear/gear/wow",1);
-print("WOW!", WOW);
 
 var groundCrew =
-walkview.makeUnionConstraint(
-        [
-         # On Ground.
-         walkview.ActionConstraint.new
-             (walkview.CircularXYSurface.new([0, 0, -1.50], 20.0),
-              func {
-                  print("Seated!");
-                  if(WOW){
-                      print("WOW!");
-                      walkview.active_walker().set_eye_height(0.82);
-                  }
-              },
-              func(x, y) {
-                  # Nothing.
-              }),
-         ]);
+    walkview.CircularXYSurface.new([0, 0, -1.50], 50.0);
 
 # Create the view managers.
 
