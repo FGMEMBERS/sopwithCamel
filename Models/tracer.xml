@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <!-- Red Tracer -->
 <PropertyList>
-  <path>tracer2.ac</path>
+	<path>tracer2.ac</path>
+
+	<animation>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
 
 	<model>
 		<path>Models/Geometry/smoke.xml</path>
@@ -36,5 +40,5 @@
 			<blue>0.25</blue>
 		</emission>
 	</animation>
-	
+
 </PropertyList>

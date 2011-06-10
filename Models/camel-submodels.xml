@@ -39,7 +39,7 @@
 <PropertyList>
 	<submodel>
 		<name>Vickers L</name>
-		<model>Aircraft/sopwithCamel/Models/tracer.xml</model>
+		<model>Models/Geometry/tracer.xml</model>
 		<trigger>controls/armament/trigger</trigger>
 		<speed>2444.2</speed>
 		<repeat>true</repeat>
@@ -53,7 +53,7 @@
 		<cd>0.193</cd>
 		<weight>0.0249122356</weight>
 		<eda>0.000500740417</eda>
-		<life>5</life>
+		<life>15</life>
 		<collision>true</collision>
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
@@ -82,7 +82,7 @@
 
 	<submodel>
 		<name>Vickers R </name>
-		<model>/Aircraft/sopwithCamel/Models/tracer.xml</model>
+		<model>Models/Geometry/tracer.xml</model>
 		<trigger>controls/armament/trigger</trigger>
 		<speed>2444.2</speed>
 		<repeat>true</repeat>
@@ -97,7 +97,7 @@
 		<cd>0.193</cd>
 		<weight>0.0249122356</weight>
 		<eda>0.000500740417</eda>
-		<life>5</life>
+		<life>15</life>
 		<collision>true</collision>
 		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
 		<impact>true</impact>
@@ -143,6 +143,7 @@
 		<buoyancy>36</buoyancy>
 		<wind>true</wind>
 		<random>true</random>
+		<randomness>0.3</randomness>
 	</submodel>
 	
 	<submodel>
@@ -163,7 +164,7 @@
 		<buoyancy>36</buoyancy>
 		<wind>true</wind>
 		<random>true</random>
+		<randomness>0.3</randomness>
 	</submodel>
-
 
 </PropertyList>

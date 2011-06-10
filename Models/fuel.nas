@@ -108,7 +108,7 @@ fuelUpdate = func {
 					fuelPerTank = total / size(availableTanks);
 					foreach(t; availableTanks) {
 							ppg = t.getNode("density-ppg").getValue();
-						# lbs = t.getNode("level-gal_us").getValue() * ppg;
+						     lbs = t.getNode("level-gal_us").getValue() * ppg;
 					    lbs = t.getNode("level-lbs").getValue();
 							lbs = lbs - fuelPerTank;
 							if(lbs < 0) {

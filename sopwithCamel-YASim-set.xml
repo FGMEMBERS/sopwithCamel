@@ -1,10 +1,29 @@
 <?xml version="1.0"?>
 
 <PropertyList>
+
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name type="string">Main</name>
+				<capacity-gal_imp>26.0</capacity-gal_imp>
+				<level-gal_imp>26.0</level-gal_imp>-->
+				<selected type="bool">1</selected>
+				<density-ppg>6.0</density-ppg>
+			</tank>
+		</fuel>
+	</consumables>
+	
 	<sim include="help.xml">
 		<description type="string">Sopwith Camel 1F.1 (YASim)</description>
 		<author type="string">AJ MacLeod, Vivian Meazza</author>
-		<status type="string">beta</status>
+		<status type="string">>advanced production</status>
+		<rating>
+			<FDM type="int">5</FDM>
+			<systems type="int">5</systems>
+			<cockpit type="int">5</cockpit>
+			<model type="int">5</model>
+		</rating>
 
 		<flight-model>yasim</flight-model>
 		<aero>sopwithCamel1F1</aero>
@@ -197,9 +216,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						camel.magneto.toggleleftMagswitch();
-
 					</script>
 				</binding>
 			</key>
@@ -209,9 +226,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						camel.magneto.togglerightMagswitch();
-
 					</script>
 				</binding>
 			</key>
