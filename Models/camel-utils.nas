@@ -4,6 +4,11 @@
 #                                                                                   #
 #####################################################################################
 
+##############
+# Define
+#does what it says on the tin
+var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
+
 # ================================ Initalize ======================================
 # Make sure all needed properties are present and accounted
 # for, and that they have sane default values.
@@ -52,6 +57,12 @@ sim_model_camel_show_pilot_Node.setBoolValue(0);
 generic_bool1_Node = props.globals.getNode("sim/multiplay/generic/int[1]", 1);
 generic_bool1_Node.setBoolValue(0);
 
+props.globals.initNode("sim/model/livery/dirt-factor",0);
+
+var engine_running_Node = props.globals.initNode("engines/engine[0]/running", 1, "BOOL");
+var hobbs_engine = aircraft.timer.new("sim/time/hobbs/engine[0]", 60, 0);
+
+hobbs_engine.reset();
 
 controls.fullBrakeTime = 0;
 
@@ -59,7 +70,6 @@ pilot_g = nil;
 headshake = nil;
 magneto = nil;
 smoke = nil;
-
 
 var time = 0;
 var dt = 0;
@@ -82,6 +92,8 @@ initialize = func {
     headshake = HeadShake.new();
     magneto = Magneto.new();
     smoke = Smoke.new();
+
+    updateHobbs();
 
     setprop("sim/model/position/latitude-deg", getprop("position/latitude-deg"));
     setprop("sim/model/position/longitude-deg", getprop("position/longitude-deg"));
@@ -130,6 +142,12 @@ update = func {
 
     pilot_g.update();
     pilot_g.gmeter_update();
+
+    var hobbs = getprop("sim/time/hobbs/engine[0]");
+    var dirt_factor = clamp(hobbs*2/3600, 0, 0.5);
+    setprop("sim/model/livery/dirt-factor", dirt_factor);
+
+#    print ("hobbs ", hobbs);
 
     if ( enabledNode.getValue() and view_number_Node.getValue() == 0 ) {
         headshake.update();
@@ -535,7 +553,23 @@ updateSmoking: func{     # set the smoke value according to the engine condition
 
 # =============================== end smoke stuff ================================
 
-# Fire it up
+# ==================================  Engine Hobbs Meter ================================
+
+updateHobbs = func{
+	var running = engine_running_Node.getValue();
+
+	if(running){
+		hobbs_engine.start();
+	} else {
+		hobbs_engine.stop();
+	}
+
+	settimer(updateHobbs,0)
+}
+
+# ================================== End Engine Hobbs Meter ================================
+
+# Fire it all up
 
 setlistener("sim/signals/fdm-initialized", initialize);
 

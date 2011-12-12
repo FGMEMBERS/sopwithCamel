@@ -230,48 +230,61 @@
 		</offsets>
 	</model>
 
-	<!-- ********* shaders ****** -->
+	<!-- ********* Effects ****** -->
 
-	<!--<animation>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>Textures/chrome2.rgb</texture>
+	<effect>
+		<inherits-from>Effects/camelreflect-uber</inherits-from>
 		<object-name>tube-upper</object-name>
 		<object-name>tube-lower</object-name>
 		<object-name>engine-air-intake</object-name>
 		<object-name>cartridge-chute</object-name>
-	</animation>-->
-
-  <effect>
-    <inherits-from>Effects/camelreflect</inherits-from>
-    <!--<texture>Textures/chrome2.rgb</texture>-->
-    <object-name>tube-upper</object-name>
-    <object-name>tube-lower</object-name>
-    <object-name>engine-air-intake</object-name>
-    <object-name>cartridge-chute</object-name>
-    <object-name>fuselage-duct</object-name>
-  </effect>
-
-	<!--<animation>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>Textures/brass.rgb</texture>
-		<object-name>switch_body</object-name>
-		<object-name>knob</object-name>
-	</animation>-->
-
-	<!--<animation>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>Textures/chrome2.rgb</texture>
 		
-	</animation>-->
+	</effect>
 
-  <effect>
-    <inherits-from>Effects/camelreflect</inherits-from>
-    <object-name>nose</object-name>
-  </effect>
-  
+	<effect>
+		<inherits-from>Effects/camelreflect-uber</inherits-from>
+		<object-name>wing-upper</object-name>
+		<object-name>wing-lower</object-name>
+		<!--<object-name>fuselage-aft</object-name>-->
+		<!--<object-name>fuselage-mid</object-name>-->
+		<object-name>tail</object-name>
+		<object-name>rudder</object-name>
+		<object-name>horizontal_stabiliser_fixed</object-name>
+		<object-name>elevator</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/camelreflect-uber</inherits-from>
+		<parameters>
+			<dirt-enabled type="int">1</dirt-enabled>
+			<!--<dirt-factor type="float">0.4</dirt-factor>-->
+		</parameters>
+		<object-name>nose</object-name>
+		<object-name>fuselage-duct</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/camelreflect-uber</inherits-from>
+		<parameters>
+			<dirt-enabled type="int">1</dirt-enabled>
+		</parameters>
+		<object-name>fuselage-mid</object-name>
+		<object-name>fuselage-aft</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/camelreflect-uber</inherits-from>
+		<parameters>
+			<rendering-hint>transparent</rendering-hint>
+			<transparent>true</transparent>
+			<render-bin>
+				<bin-number>10</bin-number>
+				<bin-name>DepthSortedBin</bin-name>
+			</render-bin>
+		</parameters>
+		<object-name>perspex-panel</object-name>
+	</effect>
+
 	<animation>
 		<type>select</type>
 		<condition>
@@ -313,6 +326,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rudder</object-name>
+		<object-name>rudder-wires</object-name>
 		<property>controls/flight/rudder</property>
 		<factor>20.0</factor>
 		<center>
@@ -329,7 +343,7 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>rudder-control-wire-S</object-name>
+		<object-name>rudder-control-wire-stbd</object-name>
 		<property>controls/flight/rudder</property>
 		<interpolation>
 			<entry>
@@ -359,7 +373,7 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>rudder-control-wire-P</object-name>
+		<object-name>rudder-control-wire-port</object-name>
 		<property>controls/flight/rudder</property>
 		<interpolation>
 			<entry>
@@ -472,6 +486,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-upper-stbd</object-name>
+		<object-name>aileron-upper-stbd-wires</object-name>
 		<property>controls/flight/aileron</property>
 		<factor>20.0</factor>
 		<axis>
@@ -503,7 +518,7 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>aileron_wire_top_S</object-name>
+		<object-name>aileron-wire-top-stbd</object-name>
 		<property>controls/flight/aileron</property>
 		<interpolation>
 			<entry>
@@ -534,6 +549,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-upper-port</object-name>
+		<object-name>aileron-upper-port-wires</object-name>
 		<property>controls/flight/aileron</property>
 		<factor>20.0</factor>
 		<axis>
@@ -565,7 +581,7 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>aileron_wire_top_P</object-name>
+		<object-name>aileron-wire-top-port</object-name>
 		<property>controls/flight/aileron</property>
 		<interpolation>
 			<entry>
@@ -596,6 +612,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-lower-stbd</object-name>
+		<object-name>aileron-lower-stbd-wires</object-name>
 		<property>controls/flight/aileron</property>
 		<factor>20.0</factor>
 		<axis>
@@ -610,7 +627,7 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>control-wire-aileron-S</object-name>
+		<object-name>control-wire-aileron-stbd</object-name>
 		<property>controls/flight/aileron</property>
 		<interpolation>
 			<entry>
@@ -641,6 +658,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>aileron-lower-port</object-name>
+		<object-name>aileron-lower-port-wires</object-name>
 		<property>controls/flight/aileron</property>
 		<factor>20.0</factor>
 		<axis>
@@ -655,7 +673,7 @@
 
 	<animation>
 		<type>rotate</type>
-		<object-name>control-wire-aileron-P</object-name>
+		<object-name>control-wire-aileron-port</object-name>
 		<property>controls/flight/aileron</property>
 		<interpolation>
 			<entry>
@@ -688,6 +706,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>elevator</object-name>
+		<object-name>elevator-wires</object-name>
 		<property>controls/flight/elevator</property>
 		<!--		<factor>20.0</factor>-->
 		<interpolation>
@@ -923,7 +942,7 @@
 			<property>sim/model/camel/show-face-mask</property>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>pilot</object-name>
