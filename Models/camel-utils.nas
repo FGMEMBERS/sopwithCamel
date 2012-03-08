@@ -14,9 +14,13 @@ var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 # for, and that they have sane default values.
 
 aircraft.livery.init("Aircraft/sopwithCamel/Models/Liveries",
-                     "sim/model/livery/name",
-                     "sim/model/livery/index"
-                     );
+	"sim/model/livery/name",
+	"sim/model/livery/index"
+	);
+
+props.globals.initNode("engines/engine[0]/rpm", 0.0, "DOUBLE");
+props.globals.initNode("controls/gear/brake-left", 0.0, "DOUBLE");
+props.globals.initNode("controls/gear/brake-right", 0.0, "DOUBLE");
 
 view_number_Node = props.globals.getNode("/sim/current-view/view-number",1);
 view_number_Node.setDoubleValue( 0 );
@@ -134,28 +138,34 @@ initialize = func {
 ###
 # ==== this is the Main Loop which keeps everything updated ========================
 ##
-update = func {
+	update = func {
 
-    generic_float0_Node.setValue(instrumentation_yawstring_Node.getValue());
-    generic_float1_Node.setValue(instrumentation_airstring_Node.getValue());
-    generic_float2_Node.setValue(instrumentation_yawstring_flutter_Node.getValue());
+		generic_float0_Node.setValue(instrumentation_yawstring_Node.getValue());
+		generic_float1_Node.setValue(instrumentation_airstring_Node.getValue());
+		generic_float2_Node.setValue(instrumentation_yawstring_flutter_Node.getValue());
 
-    pilot_g.update();
-    pilot_g.gmeter_update();
+		pilot_g.update();
+		pilot_g.gmeter_update();
 
-    var hobbs = getprop("sim/time/hobbs/engine[0]");
-    var dirt_factor = clamp(hobbs*2/3600, 0, 0.5);
-    setprop("sim/model/livery/dirt-factor", dirt_factor);
+		var hobbs = getprop("sim/time/hobbs/engine[0]");
+		var dirt_factor = clamp(hobbs*2/3600, 0, 0.5);
+		setprop("sim/model/livery/dirt-factor", dirt_factor);
 
 #    print ("hobbs ", hobbs);
 
-    if ( enabledNode.getValue() and view_number_Node.getValue() == 0 ) {
-        headshake.update();
-    }
+		if ( enabledNode.getValue() and view_number_Node.getValue() == 0 ) {
+			headshake.update();
+			}
 
-    settimer( update, 0 );
 
-}# end main loop func
+		if ( getprop("engines/engine/rpm") <=200 and getprop("controls/engines/engine/blip_switch") ) {
+			#print ("low speed mag check");
+			magneto.blipMagswitch();
+			} # endif
+
+		settimer( update, 0 );
+
+	}# end main loop func
 
 # ============================== end Main Loop ===============================
 
@@ -176,7 +186,7 @@ FuelCock = {
         obj.control = props.globals.getNode( control, 1 );
         obj.control.setIntValue( initial_pos );
 
-        print ( obj.name );
+        #print ( obj.name );
         return obj;
     },
 
@@ -199,7 +209,8 @@ Magneto = {
     left = "controls/engines/engine/mag-switch-left",
     magnetos = "controls/engines/engine/magnetos",
     left_brake = "controls/gear/brake-left",
-    right_brake = "controls/gear/brake-right"
+    right_brake = "controls/gear/brake-right",
+	rpm = "engines/engine/rpm"
     ){
         var obj = { parents : [Magneto] };
         obj.name = name;
@@ -208,14 +219,16 @@ Magneto = {
         obj.magnetos = props.globals.getNode( magnetos, 1 );
         obj.left_brake = props.globals.getNode( left_brake, 1 );
         obj.right_brake = props.globals.getNode( right_brake, 1 );
+		obj.rpm = props.globals.getNode( rpm, 1 );
         obj.left.setBoolValue( 0 );
         obj.right.setBoolValue( 0 );
-        print ( obj.name );
+		obj.rpm.setDoubleValue( 0 );
+        #print ( obj.name );
         return obj;
     },
 
 updateMagnetos: func{     # set the magneto value according to the switch positions
-# print("updating Magnetos");
+ #print("updating Magnetos");
                 if (me.left.getValue() and me.right.getValue()){                  # both
                     me.magnetos.setValue( 3 );
                 }
@@ -266,18 +279,28 @@ togglerightMagswitch:   func{
 blipMagswitch:   func{
 # print ("blip in right ", me.right.getValue()," left ", me.left.getValue());
 # print ("blip in brake right ", me.right_brake.getValue()," left ", me.left_brake.getValue());
-    if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {;
-    me.magnetos.setValue( 0 );
-    setprop("sim/model/camel/blip_switch",1);
-    } else {
-        me.updateMagnetos();
-        setprop("sim/model/camel/blip_switch",0);
-    }
+
+	if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {
+
+		if (me.rpm.getValue() > 150){
+			print("150+", me.rpm.getValue()," mags ", me.magnetos.getValue());
+			me.magnetos.setValue( 0 );
+			} elsif (me.rpm.getValue() <= 150){
+				me.magnetos.setValue( 1 );
+				print("-150", me.rpm.getValue(), " mags ", me.magnetos.getValue() );
+			}
+
+		setprop("controls/engines/engine/blip_switch", 1);
+		
+		} else {
+			me.updateMagnetos();
+			setprop("controls/engines/engine/blip_switch",0);
+		}
 
 # print ("blip out right ", me.right.getValue()," left ", me.left.getValue());
-    }, # end function
+		}, # end function
     }; #
-
+	      
 
 # =============================== end magneto stuff =========================================
 

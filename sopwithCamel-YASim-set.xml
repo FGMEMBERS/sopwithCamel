@@ -17,7 +17,7 @@
 	<sim include="help.xml">
 		<description type="string">Sopwith Camel 1F.1 (YASim)</description>
 		<author type="string">AJ MacLeod, Vivian Meazza</author>
-		<status type="string">>advanced production</status>
+		<status type="string">advanced production</status>
 		<rating>
 			<FDM type="int">5</FDM>
 			<systems type="int">5</systems>
