@@ -19,6 +19,39 @@
 			<z>0</z>
 		</axis>
 	</animation>
+
+  <!-- Pressure Knob -->
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>press-up</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>0.1</step>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>press-down</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/altimeter/setting-inhg</property>
+        <step>-0.1</step>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
 	<animation> 
 		<type>rotate</type>
 		<object-name>main_face</object-name>
@@ -31,11 +64,12 @@
 			<z>0</z>
 		</axis>
 	</animation>
+  
 	<animation> 
 		<type>rotate</type>
 		<object-name>knob</object-name>
 		<property>instrumentation/altimeter/setting-inhg</property>
-		<factor>10</factor>
+		<factor>20</factor>
 		<axis> 
 			<x>1</x>
 			<y>0</y>
