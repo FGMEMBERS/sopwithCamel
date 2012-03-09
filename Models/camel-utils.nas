@@ -283,11 +283,11 @@ blipMagswitch:   func{
 	if ( me.right_brake.getValue() != 0 or me.left_brake.getValue() != 0 ) {
 
 		if (me.rpm.getValue() > 150){
-			print("150+", me.rpm.getValue()," mags ", me.magnetos.getValue());
+#			print("150+", me.rpm.getValue()," mags ", me.magnetos.getValue());
 			me.magnetos.setValue( 0 );
 			} elsif (me.rpm.getValue() <= 150){
 				me.magnetos.setValue( 1 );
-				print("-150", me.rpm.getValue(), " mags ", me.magnetos.getValue() );
+#				print("-150", me.rpm.getValue(), " mags ", me.magnetos.getValue() );
 			}
 
 		setprop("controls/engines/engine/blip_switch", 1);

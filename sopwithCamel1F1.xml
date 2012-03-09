@@ -52,7 +52,7 @@ The reference datum for measurements is the propeller boss.
     <control-setting axis="/controls/engines/engine[0]/mixture"
                      value="1.0"/>
     <control-setting axis="/controls/flight/elevator"
-                     value="0.2625"/>
+                     value="0.2"/>
     <solve-weight idx="0"
                   weight="200"/>
   </cruise>
@@ -136,16 +136,17 @@ The reference datum for measurements is the propeller boss.
     chord="1.3730"
     sweep="0"
     dihedral="5.0"
-    camber="0.31"
-    idrag="0.75"
+    camber="0.175"
+    idrag="0.2"
+    effectiveness="1.0"
 		>
     <stall aoa="12.0"
            width="3.5"
            peak="1.25"/>
     <flap0 start="0.4548"
            end="1.0"
-           lift="1.4"
-           drag="1.4"/>
+           lift="1.3"
+           drag="1.3"/>
     <control-input axis="/controls/flight/aileron"
                    control="FLAP0"
                    split="true"/>
@@ -169,16 +170,17 @@ The reference datum for measurements is the propeller boss.
          sweep="0"
          dihedral="0"
          length="4.213"
-         camber="0.31"
-         idrag="0.75"
+         camber="0.175"
+         idrag="0.2"
+         effectiveness="1.0"
 				 >
     <stall aoa="12.0"
            width="3.5"
            peak="1.25"/>
     <flap0 start="0.4548"
            end="1.0"
-           lift="1.4"
-           drag="1.4"/>
+           lift="1.3"
+           drag="1.3"/>
     <control-input axis="/controls/flight/aileron"
                    control="FLAP0"
                    split="true"/>
