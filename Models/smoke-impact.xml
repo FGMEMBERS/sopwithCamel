@@ -7,6 +7,11 @@
 		<enable-hot type="bool">false</enable-hot>
 	</animation>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>puff</object-name>
+  </effect>
+  
 	<animation>
 		<type>billboard</type>
 		<spherical>true</spherical>

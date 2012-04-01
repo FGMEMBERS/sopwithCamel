@@ -5,7 +5,12 @@
 	<path>elliot_clinometer.ac</path>
 	<texture-path>Textures</texture-path>
 
-	<animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>tube</object-name>
+  </effect>
+
+  <animation>
 		<type>rotate</type>
 		<object-name>ball</object-name>
 		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
@@ -47,9 +52,9 @@
 
 
   <!-- *** LoD *** -->
-    <animation> 
+    <!--<animation> 
       <type>range</type>
       <min-m>0</min-m>
       <max-m>5</max-m>
-    </animation>
+    </animation>-->
 </PropertyList>

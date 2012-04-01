@@ -17,9 +17,9 @@
 	</animation> 
 -->
 	<!-- *** LoD *** -->
-	<animation> 
+	<!--<animation> 
 		<type>range</type>
 		<min-m>20</min-m>
 		<max-m>350</max-m>
-	</animation>
+	</animation>-->
 </PropertyList>

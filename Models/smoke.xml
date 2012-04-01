@@ -8,7 +8,12 @@
 		<spherical>true</spherical>
 	</animation>
 
-	<animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>puff</object-name>
+  </effect>
+
+  <animation>
 		<type>scale</type>
 		<object-name>puff</object-name>
 		<use-personality>true</use-personality>

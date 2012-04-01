@@ -232,13 +232,19 @@
 
 	<!-- ********* Effects ****** -->
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>glass</object-name>
+    <object-name>perspex-panel</object-name>
+    <object-name>Lens</object-name>
+  </effect>
+
 	<effect>
 		<inherits-from>Effects/camelreflect-uber</inherits-from>
 		<object-name>tube-upper</object-name>
 		<object-name>tube-lower</object-name>
 		<object-name>engine-air-intake</object-name>
 		<object-name>cartridge-chute</object-name>
-		
 	</effect>
 
 	<effect>
@@ -291,6 +297,10 @@
 			<property>sim/model/livery/nose-texture</property>
 		</condition>
 		<object-name>nose-textured</object-name>
+    <!--<object-name>fuselage-cover-plate-S-textured</object-name>
+    <object-name>fuselage-cover-plate-P-textured</object-name>
+    <object-name>fuselage-textured</object-name>
+    <object-name>cowl-textured</object-name>-->
 	</animation>
 
 	<animation>
@@ -301,6 +311,10 @@
 			</not>
 		</condition>
 		<object-name>nose</object-name>
+    <!--<object-name>fuselage-cover-plate-S</object-name>
+    <object-name>fuselage-cover-plate-P</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>cowl</object-name>-->
 	</animation>
 
 	<animation>
@@ -311,6 +325,10 @@
 			</not>
 		</condition>
 		<object-name>nose</object-name>
+    <!--<object-name>fuselage-cover-plate-S</object-name>
+    <object-name>fuselage-cover-plate-P</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>cowl</object-name>-->
 	</animation>
 
 	<!-- removed - causes a bug in plib-->
@@ -917,11 +935,12 @@
 	</animation>
 
 	<!-- *** LoD for the whole model *** -->
-	<animation>
+  <!-- *** removed for project Rembrandt *** -->
+	<!--<animation>
 		<type>range</type>
 		<min-m>0</min-m>
 		<max-m>10000</max-m>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<type>select</type>
@@ -1028,8 +1047,12 @@
 	<animation>
 		<type>material</type>
 		<object-name>nose-textured</object-name>
-		<property-base>sim/model/livery/material/Nose-Textured</property-base>
-		<texture-prop>texture</texture-prop>
+    <!--<object-name>fuselage-cover-plate-S-textured</object-name>
+    <object-name>fuselage-cover-plate-P-textured</object-name>
+    <object-name>fuselage-textured</object-name>
+    <object-name>cowl-textured</object-name>-->
+    <property-base>sim/model/livery/material/Nose-Textured</property-base>
+    <texture-prop>texture</texture-prop>
 		<texture>Liveries/camel_side.png</texture>
 	</animation>
 

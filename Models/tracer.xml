@@ -17,7 +17,13 @@
 		</offsets>
 	</model>
 
-	<animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>tracer</object-name>
+   </effect>
+
+
+  <animation>
 		<type>dist-scale</type>
 		<object-name>tracer</object-name>
 		<factor>0.001</factor>

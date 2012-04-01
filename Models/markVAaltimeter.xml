@@ -4,7 +4,12 @@
 	<path>markVAaltimeter.ac</path>
 	<texture-path>Textures</texture-path>
 
-	<animation> 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>glass</object-name>
+  </effect>
+
+  <animation> 
 		<type>rotate</type>
 		<object-name>needle</object-name>
 		<property>/position/altitude-ft</property>
@@ -83,9 +88,9 @@
 	</animation>
 		
 	<!-- *** LoD *** -->
-	<animation> 
+	<!--<animation> 
 		<type>range</type>
 		<min-m>0</min-m>
 		<max-m>5</max-m>
-	</animation>
+	</animation>-->
 </PropertyList>

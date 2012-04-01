@@ -30,12 +30,15 @@
 		</condition>
 	</animation>
 
-
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>PropellerDisk</object-name>
+  </effect>
 
 	<!-- *** LoD *** -->
-	<animation>
+	<!--<animation>
 		<type>range</type>
 		<min-m>0</min-m>
 		<max-m>700</max-m>
-	</animation>
+	</animation>-->
 </PropertyList>
