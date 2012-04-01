@@ -3,19 +3,19 @@
 
 	<path>fakepanel.ac</path>
 	<texture-path>Textures</texture-path>
-<!--
+
 	<animation> 
 		<type>select</type>
 		<condition>
-			<not>
+			<!--<not>-->
 				<equals>
 					<property>/sim/current-view/view-number</property>
-					<value>0</value>
+					<value>-1</value>
 				</equals>
-			</not>
+			<!--</not>-->
 		</condition>
 	</animation> 
--->
+
 	<!-- *** LoD *** -->
 	<!--<animation> 
 		<type>range</type>
