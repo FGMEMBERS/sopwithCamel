@@ -4,13 +4,17 @@
 	<path>puff.ac</path>
 	<texture-path>Textures</texture-path>
 
-
-	<animation>
+  <animation>
 		<type>billboard</type>
 		<spherical>true</spherical>
 	</animation>
 
-	<!--<animation>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>puff</object-name>
+  </effect>
+
+  <!--<animation>
 		<type>spin</type>
 		<object-name>puff</object-name>
 		<property>sim/time/elapsed-sec</property>
