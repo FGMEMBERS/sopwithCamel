@@ -274,9 +274,13 @@ initialize = func {
 initDoubleProp = func {
 
     node = arg[0]; prop = arg[1]; val = arg[2];
+
     if(node.getNode(prop) != nil) {
         val = num(node.getNode(prop).getValue());
     }
+
+    if(val == nil) val = 0;
+
     node.getNode(prop, 1).setDoubleValue(val);
 
 }# end func
