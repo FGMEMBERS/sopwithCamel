@@ -5,7 +5,7 @@ var elapsed_time = 0;
 var yawstring = func {
 
 	var airspeed = getprop("velocities/airspeed-kt");
-	var position = getprop("orientation/side-slip-deg");
+	var position = -getprop("orientation/side-slip-deg"); <!-- inverted after a change in side-slip sign (bug #901) -->
 	var dt = getprop("sim/time/delta-sec");
 
 	var severity = -(airspeed / 20) + 2 * (airspeed / 20) * rand();
