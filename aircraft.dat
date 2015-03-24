@@ -1,0 +1,218 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# Aircraft:
+# Sopwith F.1 Camel
+#
+# File name:
+# sopwithCamel-v2-nl
+#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# Authors:
+#
+# Michael Selig
+# http://www.uiuc.edu/~m-selig
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# Notes:
+# 2002/09/21 Initial development
+# 2002/09/11 Several refinements since initial work.
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# References:
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Specs:
+# Stall speed = ~48 knots
+# Max speed   = 102.5 knots w/ Bentley 150 Hp engine (118 mph)
+# Max rate of climb at sea level = 1100 fpm
+# Weight      = 1430 lb w/ half fuel in main tank
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Todo items
+# [] add in torque (gyroscopic forces are model already)
+# [] placeholder data below
+# [] model spin by including nonlinear cn data
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# The Sopwith Camel was actually unstable.
+# Fly w/ an aft cg to try this out.
+#init Dx_cg -.3
+#record Dx_cg
+
+# various "init" FGFS settings
+init use_V_rel_wind_2U    
+init use_dyn_on_speed_curve1    
+init dyn_on_speed  2    
+init dyn_on_speed_zero 1    
+init use_Alpha_dot_on_speed 7   # [ft/sec] speed below which Alpha_dot is set to zero    
+init use_gamma_horiz_on_speed 5 # [ft/sec] speed above which Gamma_horiz_deg is used in chase view [1]
+
+init downwashMode 100    
+init downwashCoef 0.030  # [1/ft] [x] Sopwith Camel notes 020928 p 1
+
+# geometry data
+geometry bw     28.      # [ft]   [x] Sopwith Camel notes 020921 p 1
+geometry cbar    8.25    # [ft]   [x] 
+geometry Sw    231.      # [ft^2] [x] 
+
+# control deflections
+controlSurface de 16.5 13.4      # [deg] [x] 16.5 nose up, 13.4 nose down
+controlSurface da 14 14          # [deg] [x]
+controlSurface dr 20.2 20.2      # [deg] [x]
+
+mass Weight    1430      # [lb]        [x] see Sopwith Camel notes 020921 p 2, flying w/ 1/2 main tank full
+mass I_xx       727.7    # [slug-ft^2] [x] calculated from weights and balance data (see spreadsheet)
+mass I_yy       595.6    # [slug-ft^2] [x] calculated from weights and balance data (see spreadsheet)
+mass I_zz      1137.42   # [slug-ft^2] [x] calculated from weights and balance data (see spreadsheet)
+mass I_xz         0      # [slug-ft^2] [x] calculated from weights and balance data (see spreadsheet)
+
+# Apparent mass terms
+mass Mass_appMass_ratio  .0868   # [x] apparent mass notes 020927 p 1
+mass I_xx_appMass_ratio  .12     # [x] apparent mass notes 020927 p 1
+mass I_yy_appMass_ratio  .034    # [x] apparent mass notes 020927 p 1
+
+engine simpleSingleModel 450 -5 290 # [lb] [fps]  [lb/fps]
+# where token3 - static thrust in [lb]
+#       token4 - speed at which thrust goes to zero [ft/sec]
+#       token5 - slope dT/dV at the speed at which thrust goes to zero [lb/fps]
+
+# turn on gyroscopic forces between pitch/yaw and engine rotation
+engine gyroForce_Q_body
+engine gyroForce_R_body
+engine omegaRPM 300 1250       # [rpm] {minOmegaRPM} {maxOmegaRPM}
+#engine omega {minOmega} {maxOmega}  
+#engine polarInertia 24.4019    # [slug-ft^2]      
+engine polarInertia 19.2143    # [slug-ft^2]      
+
+engine slipstream_effects    
+engine propDia 9.33          # [ft]   [x] 020921 p 2 spreadsheet
+
+# [] need to write code for these two lines and turn on
+#engine eta_q_CL_adot 1
+#engine eta_q_CL_q    1
+
+engine eta_q_Cm_q     1    
+engine eta_q_Cm_adot  1    
+engine eta_q_Cmfade   1    
+#engine eta_q_Cl_beta 1
+#engine eta_q_Cl_p    1
+#engine eta_q_Cl_r    1
+engine eta_q_Cl_dr    1    
+engine eta_q_CY_beta  1    
+#engine eta_q_CY_p    1
+#engine eta_q_CY_r    1
+engine eta_q_CY_dr    1    
+engine eta_q_Cn_beta  1    
+engine eta_q_Cn_p     1    
+engine eta_q_Cn_r     1    
+engine eta_q_Cn_dr    1    
+
+# Lift buildup
+# Lift curve 
+CL CLfa CLfa.dat 0 1     # [x] Sopwith Camel notes p 020927 p 4
+CL CL_adot  0.5776       # [/rad] [x] Sopwith Camel notes 020928 p 3
+CL CL_q     1.153        # [/rad] [x] Sopwith Camel notes 020928 p 4
+
+# drag build up
+# aircraft parasite drag
+CD CDo      0.0378          # [x] NASA SP-468
+# extra wing parasite drag
+CD CDfa CDfa.dat 0 1 1      # [x] Sopwith Camel notes p 020927 p 4
+# drag due to elevator deflection
+CD CD_de 0.007              # [x] Sopwith Camel notes 021018 p 2
+#CD CDfade CDfade.dat 0 1 1
+# - induced drag
+CD CDK 0.0645               # [x] Sopwith Camel notes 020928 p 1
+
+# Pitching moment 
+# Moment due to wing from nominally +-180 deg 
+Cm Cmfa Cmfa.dat  0 1           # [x] Sopwith Camel notes p 020927 p 4
+# Moment due to tail curve from nominally +-180 deg 
+Cm Cmfade Cmfade.dat  0 1 1     # [x] Sopwith Camel notes 021019 p 2
+Cm Cm_adot -0.9612              # [/rad]  [x] Sopwith Camel notes 020928 p 3
+Cm Cm_q    -1.9182              # [/rad]  [x] Sopwith Camel notes 020928 p 4
+
+# due to side slip
+CY CY_beta -0.419        # [/rad] [x] Sopwith Camel 021017 p 4
+Cl Cl_beta -0.01         # [/rad] [] placeholder
+Cn Cn_beta  0.105        # [/rad] [x] Sopwith Camel notes 021017 p 1
+
+# due to aileron deflection
+#CY CY_da 0
+Cl Cl_da   -0.168        # [/rad] [x] Sopwith Camel notes 021016 p 2
+Cn Cn_da    0.028        # [/rad] [x] S&C notes 021016 p 3
+
+# due to rudder deflection
+CY CY_dr    0.041        # [/rad] [x] Sopwith Camel notes 021016 p 5
+Cn Cn_dr   -0.030        # [/rad] [x] Sopwith Camel notes 021016 p 6
+Cl Cl_dr    0.0023       # [/rad] [x] Sopwith Camel notes 021016 p 6
+
+# due to roll rate
+CY CY_p    -0.004        # [/rad] [x] S&C notes 021016 p 5
+Cl Cl_p    -0.289        # [/rad] [x] Sopwith Camel notes 021016 p 1
+Cn Cn_p    -0.0286       # [/rad] [x] S&C notes 021016 p 4
+
+# due to yaw rate
+CY CY_r     0.1218       # [/rad] [x] Sopwith Camel 021017 p 6
+Cl Cl_r     0.100        # [/rad] [x] S&C notes 021018 p 1
+Cn Cn_r    -0.0788       # [/rad] [x] S&C notes 021018 p 1 and Sopwith Camel 021017 p 5
+
+# nose wheel (must be position 0 if present)
+gear Dx_gear 0 25.5     # x-offset from CG [ft]
+gear Dy_gear 0 0        # y-offset from CG [ft]
+gear Dz_gear 0 -0.5     # z-offset from CG [ft]
+gear cgear 0  100       # damping [lbs/ft/sec]
+gear kgear 0  200       # springiness [lbs/ft]
+gear muGear 0 0.01      # rolling coefficient
+gear strutLength 0 -0.5 # gear travel [ft] (not yet used)
+
+
+# right gear (must be position 1 if present)
+gear Dx_gear 1  0.9042    # [ft]
+gear Dy_gear 1 2.1194     # [ft]
+gear Dz_gear 1 5.35       # [ft]
+gear cgear 1  600        # [lbs/ft/sec]
+gear kgear 1 1200        # [lbs/ft]
+gear muGear 1 0.01       # rolling coefficient
+gear strutLength 1 2.5   # [ft]
+
+# left gear (must be position 2 if present)
+gear Dx_gear 2  0.9042    # [ft]
+gear Dy_gear 2 -2.1194    # [ft]
+gear Dz_gear 2 5.35       # [ft]
+gear cgear 2  600        # [lbs/ft/sec]
+gear kgear 2 1200        # [lbs/ft]
+gear muGear 2 0.01       # rolling coefficient
+gear strutLength 2 2.5   # [ft]
+
+# tail dragger  
+gear Dx_gear 3 -12.1824    # [ft]
+gear Dy_gear 3   0       # [ft]
+gear Dz_gear 3   2.8763    # [ft]
+gear cgear 3  100        # [lbs/ft/sec]
+gear kgear 3  200        # [lbs/ft]
+gear muGear 3 0.05       # rolling coefficient
+gear strutLength 3 2.5   # [ft]
+
+# left wing tip
+gear Dx_gear 4  1.356    # [ft]
+gear Dy_gear 4 -14.0     # [ft]
+gear Dz_gear 4 2.2       # [ft]
+gear cgear   4  150      # [lbs/ft/sec]
+gear kgear   4  300      # [lbs/ft]
+gear muGear  4 10.0      # rolling coefficient
+gear strutLength 4 2.5   # [ft]
+
+# right wing tip
+gear Dx_gear 5  1.356    # [ft]
+gear Dy_gear 5 14.0      # [ft]
+gear Dz_gear 5 2.2       # [ft]
+gear cgear   5  150      # [lbs/ft/sec]
+gear kgear   5  300      # [lbs/ft]
+gear muGear  5 10.0      # rolling coefficient
+gear strutLength 5 2.5   # [ft]
+
+*
