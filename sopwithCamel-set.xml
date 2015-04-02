@@ -8,7 +8,6 @@
 
 		<flight-model>larcsim</flight-model>
 		<aero>uiuc</aero>
-		<aircraft-dir>Aircraft/UIUC/sopwithCamel-v2-nl</aircraft-dir>
 
 		<startup>
 			<splash-texture>Aircraft/sopwithCamel/splash.rgb</splash-texture>
