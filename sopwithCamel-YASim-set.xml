@@ -208,7 +208,7 @@
 	</sim>
 
 	<input>
-		<keyboard include="../Generic/WalkView/walk-view-keys.xml">
+		<keyboard include="Aircraft/Generic/WalkView/walk-view-keys.xml">
 			<!-- map keys for mag switches  -->
 			<key n="123">
 				<name>{</name>
