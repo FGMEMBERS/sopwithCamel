@@ -143,7 +143,7 @@
 		<buoyancy>36</buoyancy>
 		<wind>true</wind>
 		<random>true</random>
-		<randomness>0.3</randomness>
+		<randomness><life>0.3</life></randomness>
 	</submodel>
 	
 	<submodel>
@@ -164,7 +164,7 @@
 		<buoyancy>36</buoyancy>
 		<wind>true</wind>
 		<random>true</random>
-		<randomness>0.3</randomness>
+		<randomness><life>0.3</life></randomness>
 	</submodel>
 
 </PropertyList>
