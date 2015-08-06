@@ -5,10 +5,10 @@ Sopwith Camel simulation config.  This file ties together all the
 components used by FGFS to represent the flight data model, instrument
 panel, and external model.
 
-Flight model details: 
+Flight model details:
 Aircraft/UIUC/sopwithCamel-v1-nl/README.sopwithCamel.html
 
-External model details:  
+External model details:
 Aircraft/sopwithCamel/Models/uiuc/sopwithCamel/README.TXT
 (courtesy of Scrubby PC, af_scrubbypc@hotmail.com)
 
@@ -23,6 +23,7 @@ Last update: Nov 9, 2002 Michael Selig, m-selig@uiuc.edu
   <description>Sopwith Camel (larcsim)</description>
   <author>Michael Selig, Scrubby PC</author>
   <status>production</status>
+  <variant-of>sopwithCamel-YASim</variant-of>
 
   <flight-model>larcsim</flight-model>
   <aero>uiuc</aero>
