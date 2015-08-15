@@ -8,12 +8,13 @@
 
 		<flight-model>larcsim</flight-model>
 		<aero>uiuc</aero>
+		<variant-of>sopwithCamel-YASim</variant-of>
 
 		<startup>
 			<splash-texture>Aircraft/sopwithCamel/splash.rgb</splash-texture>
 		</startup>
 
-		<sound> 
+		<sound>
 			<path>Aircraft/sopwithCamel/Sounds/uiuc/sopwithCamel-sound.xml</path>
 		</sound>
 
