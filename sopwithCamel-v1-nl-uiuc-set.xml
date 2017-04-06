@@ -25,6 +25,18 @@ Last update: Nov 9, 2002 Michael Selig, m-selig@uiuc.edu
   <status>production</status>
   <variant-of>sopwithCamel-YASim</variant-of>
 
+ <tags>
+	<tag>fighter</tag>
+	<tag>1910s</tag>
+	<tag>1920s</tag>
+	<tag>ww1</tag>
+	<tag>biplane</tag>
+	<tag>fixed-gear</tag>
+	<tag>tail-dragger</tag>
+	<tag>piston</tag>
+	<tag>single-engine</tag>
+ </tags>
+
   <flight-model>larcsim</flight-model>
   <aero>uiuc</aero>
 
