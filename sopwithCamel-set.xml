@@ -6,6 +6,18 @@
 		<author type="string">AJ MacLeod, Vivian Meazza, Michael Selig(FDM)</author>
 		<status type="string">early production</status>
 
+		<tags>
+			<tag>fighter</tag>
+			<tag>1910s</tag>
+			<tag>1920s</tag>
+			<tag>ww1</tag>
+			<tag>biplane</tag>
+			<tag>fixed-gear</tag>
+			<tag>tail-dragger</tag>
+			<tag>piston</tag>
+			<tag>single-engine</tag>
+		</tags>
+
 		<flight-model>larcsim</flight-model>
 		<aero>uiuc</aero>
 		<variant-of>sopwithCamel-YASim</variant-of>
